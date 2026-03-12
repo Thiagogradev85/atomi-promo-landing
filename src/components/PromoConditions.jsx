@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaBoxOpen, FaCalendarAlt, FaStore, FaCheckCircle } from 'react-icons/fa';
+import { FaBoxOpen, FaCalendarAlt, FaStore, FaCheckCircle, FaShieldAlt } from 'react-icons/fa';
 import { MdElectricBike } from 'react-icons/md';
 
 const conditions = [
@@ -68,6 +68,50 @@ export default function PromoConditions({ variant = 'orange' }) {
             </motion.div>
           ))}
         </div>
+
+        {/* Garantia Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className={`mb-10 rounded-2xl overflow-hidden border ${isOrange ? 'border-atomi-orange/30' : 'border-atomi-gold/30'}`}
+        >
+          <div className={`flex flex-col sm:flex-row items-center gap-6 px-8 py-7 bg-gradient-to-r ${
+            isOrange
+              ? 'from-atomi-orange/15 via-atomi-orange/5 to-transparent'
+              : 'from-atomi-gold/15 via-atomi-gold/5 to-transparent'
+          }`}>
+            {/* Ícone + destaque */}
+            <div className="flex-shrink-0 flex flex-col items-center sm:items-start gap-1">
+              <FaShieldAlt className={`${accentColor} text-5xl`} />
+            </div>
+
+            <div className="flex-1 text-center sm:text-left">
+              <p className={`${accentColor} text-xs font-bold uppercase tracking-widest mb-1`}>
+                Diferencial exclusivo ATOMI
+              </p>
+              <h3 className="text-white text-2xl md:text-3xl font-black mb-1">
+                1 ANO DE GARANTIA
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed max-w-xl">
+                Todos os produtos ATOMI Pack Shoroow vêm com <span className="text-white font-semibold">12 meses de garantia</span> —
+                o dobro do que a maioria dos concorrentes oferece. Qualidade e segurança que você pode contar.
+              </p>
+            </div>
+
+            {/* Comparativo */}
+            <div className="flex-shrink-0 flex flex-col gap-2 text-sm min-w-[160px]">
+              <div className={`flex items-center gap-2 ${isOrange ? 'bg-atomi-orange/10 border border-atomi-orange/20' : 'bg-atomi-gold/10 border border-atomi-gold/20'} rounded-xl px-4 py-2.5`}>
+                <FaShieldAlt className={`${accentColor} flex-shrink-0`} />
+                <span className={`${accentColor} font-black`}>ATOMI — 12 meses</span>
+              </div>
+              <div className="flex items-center gap-2 bg-gray-800/50 border border-gray-700/50 rounded-xl px-4 py-2.5 opacity-60">
+                <FaShieldAlt className="text-gray-500 flex-shrink-0" />
+                <span className="text-gray-500 font-medium line-through">Concorrentes — 6 meses</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Price Summary Table */}
         <motion.div

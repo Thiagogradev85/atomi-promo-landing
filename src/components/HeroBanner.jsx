@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaFire, FaChevronDown } from 'react-icons/fa';
+import { FaFire, FaChevronDown, FaWhatsapp } from 'react-icons/fa';
 import { MdElectricScooter } from 'react-icons/md';
 import CountdownTimer from './CountdownTimer';
 
@@ -94,9 +94,13 @@ export default function HeroBanner({ variant = 'orange' }) {
             href="#contato"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className={`border-2 ${btnOutline} font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 flex items-center justify-center`}
+            className={`border-2 ${btnOutline} font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 flex items-center gap-3 justify-center relative overflow-hidden`}
           >
-            Falar com Vendas
+            <span className="relative flex items-center justify-center">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-40 animate-ping" />
+              <FaWhatsapp size={22} className="relative text-green-400" />
+            </span>
+            Fale Conosco
           </motion.a>
         </div>
       </motion.div>

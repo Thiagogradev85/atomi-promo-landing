@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Navbar({ variant = 'orange' }) {
   const [scrolled, setScrolled] = useState(false);
@@ -87,9 +88,13 @@ export default function Navbar({ variant = 'orange' }) {
 
             <a
               href="#contato"
-              className={`${accentBg} text-white text-sm font-bold px-5 py-2 rounded-lg hover:opacity-90 transition-opacity`}
+              className={`${accentBg} text-white text-sm font-bold px-5 py-2 rounded-lg hover:opacity-90 transition-opacity flex items-center gap-2`}
             >
-              Quero Comprar
+              <span className="relative flex items-center justify-center">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-50 animate-ping" />
+                <FaWhatsapp size={16} className="relative" />
+              </span>
+              Fale Conosco
             </a>
           </div>
 
@@ -134,8 +139,12 @@ export default function Navbar({ variant = 'orange' }) {
                 </Link>
               </div>
               <a href="#contato" onClick={() => setMobileOpen(false)}
-                className={`${accentBg} text-white text-center font-bold py-3 rounded-lg`}>
-                Quero Comprar
+                className={`${accentBg} text-white text-center font-bold py-3 rounded-lg flex items-center justify-center gap-2`}>
+                <span className="relative flex items-center justify-center">
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-50 animate-ping" />
+                  <FaWhatsapp size={16} className="relative" />
+                </span>
+                Fale Conosco
               </a>
             </div>
           </motion.div>

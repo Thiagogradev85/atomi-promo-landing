@@ -9,6 +9,27 @@ import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
 import { FaFire } from 'react-icons/fa';
 
+function EasterBadge() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 0.8, type: 'spring' }}
+      className="fixed top-24 right-4 z-40 hidden lg:block"
+    >
+      <motion.div
+        animate={{ rotate: [0, 5, -5, 0] }}
+        transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
+        className="easter-badge-orange text-white text-xs font-black px-3 py-2 rounded-full text-center shadow-xl"
+      >
+        <div className="text-lg">🐰</div>
+        <div>PÁSCOA</div>
+        <div>2026</div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
 export default function LandingV1() {
   return (
     <div className="min-h-screen bg-atomi-black">
@@ -19,10 +40,11 @@ export default function LandingV1() {
         className="bg-atomi-orange text-white text-xs font-bold text-center py-2 px-4 flex items-center justify-center gap-2 z-[60] relative"
       >
         <FaFire className="animate-pulse" />
-        <span>🚨 MEGA PROMOÇÃO PACK SHOROOW — FEVEREIRO A MARÇO 2026 — ESTOQUE LIMITADO!</span>
+        <span>🐰 PROMOÇÃO DE PÁSCOA PACK SHOROOW — FEV/MAR 2026 — ESTOQUE LIMITADO! 🥚</span>
         <FaFire className="animate-pulse" />
       </motion.div>
 
+      <EasterBadge />
       <Navbar variant="orange" />
       <HeroBanner variant="orange" />
       <ProductsSection variant="orange" />

@@ -1,16 +1,19 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
-import { IoClose } from 'react-icons/io5';
-
-const WHATSAPP_NUMBER = '5500000000000'; // Substitua pelo número real
 
 export default function WhatsAppButton() {
   const [showTooltip, setShowTooltip] = useState(false);
 
-  const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    '🏍️ Olá! Vi a promoção Pack Shoroow da ATOMI e tenho interesse nos produtos. Pode me passar mais informações?'
-  )}`;
+  function handleClick() {
+    const section = document.getElementById('contato');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Dispara o hashchange manualmente para acionar o highlight do dropdown
+      history.pushState(null, '', '#contato');
+      window.dispatchEvent(new HashChangeEvent('hashchange'));
+    }
+  }
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
@@ -23,15 +26,13 @@ export default function WhatsAppButton() {
             className="bg-white text-gray-800 text-sm font-medium px-4 py-2 rounded-xl shadow-2xl max-w-[220px] text-right"
           >
             <p className="font-bold text-green-700">Fale conosco!</p>
-            <p className="text-xs text-gray-500 mt-0.5">Atendimento via WhatsApp</p>
+            <p className="text-xs text-gray-500 mt-0.5">Selecione seu estado e fale com o consultor</p>
           </motion.div>
         )}
       </AnimatePresence>
 
-      <motion.a
-        href={waLink}
-        target="_blank"
-        rel="noopener noreferrer"
+      <motion.button
+        onClick={handleClick}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 1.5, type: 'spring', stiffness: 200 }}
@@ -39,13 +40,12 @@ export default function WhatsAppButton() {
         whileTap={{ scale: 0.9 }}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
-        className="w-16 h-16 bg-green-500 hover:bg-green-400 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/40 transition-colors duration-200"
-        aria-label="Contato via WhatsApp"
+        className="relative w-16 h-16 bg-green-500 hover:bg-green-400 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/40 transition-colors duration-200"
+        aria-label="Fale conosco pelo WhatsApp"
       >
-        <FaWhatsapp size={32} className="text-white" />
-        {/* Pulse ring */}
+        <FaWhatsapp size={32} className="text-white relative z-10" />
         <span className="absolute w-16 h-16 rounded-full bg-green-500 opacity-40 animate-ping" />
-      </motion.a>
+      </motion.button>
     </div>
   );
 }

@@ -176,6 +176,14 @@
   background: linear-gradient(135deg, #7C3AED, #D4AF37);
   animation: glow 2s ease-in-out infinite alternate;
 }
+.easter-badge-orange {
+  background: linear-gradient(135deg, #F97316, #EA6C0A);
+  animation: glow-orange 2s ease-in-out infinite alternate;
+}
+@keyframes glow-orange {
+  from { box-shadow: 0 0 8px rgba(249, 115, 22, 0.5); }
+  to   { box-shadow: 0 0 20px rgba(249, 115, 22, 0.9), 0 0 40px rgba(249, 115, 22, 0.4); }
+}
 
 @keyframes shimmer {
   0% { background-position: -200% center; }

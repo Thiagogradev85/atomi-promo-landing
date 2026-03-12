@@ -1,12 +1,21 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaBolt, FaRoad, FaWeight, FaTachometerAlt, FaShieldAlt } from 'react-icons/fa';
+import { FaBolt, FaRoad, FaWeight, FaTachometerAlt, FaShieldAlt, FaMedal } from 'react-icons/fa';
 import { MdBattery90, MdTimer } from 'react-icons/md';
 import { GiTireIronCross } from 'react-icons/gi';
 import { formatPrice, getDiscount } from '../data/products';
 
+// Gera todas as variantes de caminho para a imagem do produto pelo ID
+// Ex: /images/m201.jpg, /images/m201.png, /images/m201.jpeg, /images/m201.webp
+function getProductImageSources(productId) {
+  const exts = ['jpg', 'jpeg', 'png', 'webp'];
+  return exts.map((ext) => `/images/${productId}.${ext}`);
+}
+
 function ProductImage({ product }) {
-  const [imgError, setImgError] = useState(false);
+  const [srcIndex, setSrcIndex] = useState(0);
+  const sources = getProductImageSources(product.id);
+  const allFailed = srcIndex >= sources.length;
 
   const gradients = {
     'm201': 'from-gray-900 via-gray-800 to-black',
@@ -17,13 +26,13 @@ function ProductImage({ product }) {
     'c1': 'from-gray-900 via-gray-700 to-black',
   };
 
-  if (!imgError) {
+  if (!allFailed) {
     return (
       <img
-        src={product.image}
+        src={sources[srcIndex]}
         alt={`ATOMI ${product.name}`}
         className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
-        onError={() => setImgError(true)}
+        onError={() => setSrcIndex((i) => i + 1)}
       />
     );
   }
@@ -137,11 +146,17 @@ export default function ProductCard({ product, variant = 'orange', index = 0 }) 
             </div>
           </div>
 
-          {/* Min. 4 units notice */}
-          <div className={`text-xs text-center py-1.5 rounded-lg mb-3 border ${
-            isOrange ? 'border-atomi-orange/20 text-atomi-orange/80 bg-atomi-orange/5' : 'border-atomi-gold/20 text-atomi-gold/80 bg-atomi-gold/5'
-          }`}>
-            📦 Mínimo 4 unidades por pedido
+          {/* Garantia + Min. 4 */}
+          <div className="flex gap-2 mb-3">
+            <div className={`flex-1 flex items-center justify-center gap-1.5 text-xs py-1.5 rounded-lg border ${
+              isOrange ? 'border-atomi-orange/20 text-atomi-orange/80 bg-atomi-orange/5' : 'border-atomi-gold/20 text-atomi-gold/80 bg-atomi-gold/5'
+            }`}>
+              <FaMedal size={11} />
+              1 ano de garantia
+            </div>
+            <div className="flex-1 flex items-center justify-center gap-1 text-xs py-1.5 rounded-lg border border-gray-700/50 text-gray-500 bg-black/20">
+              📦 Mín. 4 unidades
+            </div>
           </div>
 
           {/* CTA Button */}
