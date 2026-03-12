@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-atomi-black text-white font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-atomi-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-atomi-orange rounded-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-atomi-orange hover:bg-atomi-orange-dark text-white font-bold py-3 px-6 rounded-lg
+           transition-all duration-300 transform hover:scale-105 hover:shadow-lg
+           hover:shadow-atomi-orange/30 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 border-atomi-orange text-atomi-orange hover:bg-atomi-orange hover:text-white
+           font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+
+  .card-dark {
+    @apply bg-atomi-card border border-atomi-border rounded-2xl overflow-hidden
+           transition-all duration-300 hover:border-atomi-orange/50 hover:shadow-xl
+           hover:shadow-atomi-orange/10 hover:-translate-y-1;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-5xl font-display tracking-wide text-white;
+  }
+
+  .price-original {
+    @apply text-gray-500 line-through text-sm;
+  }
+
+  .price-promo {
+    @apply text-atomi-orange font-black text-2xl;
+  }
+
+  .badge-discount {
+    @apply bg-atomi-orange text-white text-xs font-black px-2 py-1 rounded-full;
+  }
+
+  .spec-item {
+    @apply flex flex-col items-center p-2 bg-black/30 rounded-lg;
+  }
+
+  .spec-value {
+    @apply text-white font-bold text-sm;
+  }
+
+  .spec-label {
+    @apply text-gray-500 text-xs mt-0.5;
+  }
+
+  /* Purple/Gold theme variants */
+  .btn-gold {
+    @apply bg-atomi-gold hover:bg-atomi-gold-light text-black font-bold py-3 px-6 rounded-lg
+           transition-all duration-300 transform hover:scale-105 hover:shadow-lg
+           hover:shadow-atomi-gold/30 active:scale-95;
+  }
+
+  .card-purple {
+    @apply bg-gradient-to-br from-[#1a0030]/80 to-[#0d0015]/80 border border-atomi-purple/30 rounded-2xl overflow-hidden
+           transition-all duration-300 hover:border-atomi-gold/50 hover:shadow-xl
+           hover:shadow-atomi-purple/20 hover:-translate-y-1 backdrop-blur-sm;
+  }
+}
+
+@layer utilities {
+  .text-gradient-orange {
+    @apply bg-gradient-to-r from-atomi-orange to-orange-300 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-atomi-gold to-yellow-300 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-purple {
+    @apply bg-gradient-to-r from-atomi-purple-light to-atomi-gold bg-clip-text text-transparent;
+  }
+
+  .bg-hero-dark {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  }
+
+  .bg-hero-purple {
+    background: linear-gradient(135deg, #0d0015 0%, #1a0030 50%, #0d0015 100%);
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.4);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+  }
+
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    animation: float 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+}
+
+/* Particle effects for V2 */
+.particles-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particles-container::before,
+.particles-container::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  animation: float 6s ease-in-out infinite;
+}
+
+.particles-container::before {
+  background: #7C3AED;
+  top: 10%;
+  left: 10%;
+}
+
+.particles-container::after {
+  background: #D4AF37;
+  bottom: 10%;
+  right: 10%;
+  animation-delay: -3s;
+}
+
+/* Shimmer effect for prices */
+.price-shimmer {
+  background: linear-gradient(90deg, #F97316, #FB923C, #F97316);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Easter egg badge */
+.easter-badge {
+  background: linear-gradient(135deg, #7C3AED, #D4AF37);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 10px rgba(124, 58, 237, 0.5); }
+  100% { box-shadow: 0 0 25px rgba(212, 175, 55, 0.8); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
