@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATOMI Pack Shoroow — Project Presentation</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f9fa;
+      color: #1a1a2e;
+      padding: 40px 20px;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.10);
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #FF6B00 0%, #ff8c00 50%, #D4AF37 100%);
+      padding: 48px 48px 40px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+    .header-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+    .header h1 span {
+      opacity: 0.75;
+      font-weight: 400;
+    }
+    .header p {
+      font-size: 15px;
+      opacity: 0.9;
+      max-width: 520px;
+      line-height: 1.6;
+    }
+    .header-meta {
+      margin-top: 24px;
+      display: flex;
+      gap: 24px;
+      font-size: 12px;
+      opacity: 0.8;
+      flex-wrap: wrap;
+    }
+    .header-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Body */
+    .body { padding: 48px; }
+
+    /* Section */
+    .section { margin-bottom: 40px; }
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #FF6B00;
+      margin-bottom: 12px;
+    }
+    .section h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 14px;
+    }
+    .section p {
+      font-size: 14px;
+      color: #4a4a6a;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    /* Cards grid */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .card {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 20px;
+      border-left: 4px solid #FF6B00;
+    }
+    .card.gold { border-left-color: #D4AF37; }
+    .card.purple { border-left-color: #7C3AED; }
+    .card.green { border-left-color: #22c55e; }
+    .card h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 6px;
+    }
+    .card p {
+      font-size: 12px;
+      color: #6b7280;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Feature list */
+    .features { list-style: none; }
+    .features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 14px;
+      color: #4a4a6a;
+      line-height: 1.5;
+    }
+    .features li:last-child { border-bottom: none; }
+    .features li .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #FF6B00;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    /* Tech stack */
+    .tech-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .tech-badge {
+      background: #1a1a2e;
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+    .tech-badge.light {
+      background: #f0f0f5;
+      color: #1a1a2e;
+    }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 32px 0;
+    }
+
+    /* Quote */
+    .quote {
+      background: linear-gradient(135deg, #fff7ed, #fef3c7);
+      border-radius: 12px;
+      padding: 24px 28px;
+      border-left: 4px solid #FF6B00;
+      margin: 24px 0;
+    }
+    .quote p {
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 500;
+      color: #1a1a2e;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Two-col */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #1a1a2e;
+      color: white;
+      padding: 28px 48px;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer strong { color: #FF6B00; }
+    .footer span { opacity: 0.55; }
+
+    /* Print */
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="header-tag">Project Overview · March 2026</div>
+      <h1>ATOMI Pack Shoroow<br><span>Promotional Landing Page</span></h1>
+      <p>
+        A high-converting, mobile-first sales landing page for electric bikes and scooters —
+        with geo-based seller routing via WhatsApp, built for the Easter 2026 wholesale campaign.
+      </p>
+      <div class="header-meta">
+        <span>⚡ Electric Vehicles</span>
+        <span>📦 Wholesale / B2B</span>
+        <span>🇧🇷 Brazilian Market</span>
+        <span>🐰 Easter 2026 Campaign</span>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="body">
+
+      <!-- What is it -->
+      <div class="section">
+        <div class="section-label">Overview</div>
+        <h2>What is this project?</h2>
+        <p>
+          ATOMI is a Brazilian brand that sells electric bikes and electric scooters.
+          This landing page was created for a special wholesale promotion — the <strong>"Pack Shoroow"</strong>
+          Easter 2026 campaign — targeting resellers and distributors across Brazil.
+        </p>
+        <p>
+          The page replaces a traditional contact form with a <strong>direct WhatsApp sales flow</strong>,
+          routing each potential buyer to the correct salesperson based on their Brazilian state.
+          No friction, no waiting — one click to the right sales rep.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Key features -->
+      <div class="section">
+        <div class="section-label">Core Features</div>
+        <h2>What does it do?</h2>
+        <ul class="features">
+          <li>
+            <div class="dot"></div>
+            <span><strong>Product showcase</strong> — 6 electric vehicles (bikes + scooters) with full specs, promo pricing, and discount badges</span>
+          </li>
+          <li>
+            <div class="dot"></div>
+            <span><strong>Geo-based seller routing</strong> — buyer selects their Brazilian state from a dropdown (all 27 states); each state maps to a dedicated sales rep</span>
+          </li>
+          <li>
+            <div class="dot"></div>
+            <span><strong>Seller modal</strong> — on state selection, a modal appears with the salesperson's photo, name, territory, and a direct WhatsApp button</span>
+          </li>
+          <li>
+            <div class="dot"></div>
+            <span><strong>No forms, no delays</strong> — every CTA leads directly to a personalized WhatsApp conversation with the right rep</span>
+          </li>
+          <li>
+            <div class="dot"></div>
+            <span><strong>1-year warranty highlight</strong> — prominently displayed, compared to the industry standard of 6 months</span>
+          </li>
+          <li>
+            <div class="dot"></div>
+            <span><strong>Floating WhatsApp button</strong> — follows the user while scrolling; clicking it jumps to the state selector and highlights it</span>
+          </li>
+        </ul>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Elevator pitch -->
+      <div class="section">
+        <div class="section-label">One-Liner</div>
+        <div class="quote">
+          <p>
+            "A zero-friction B2B sales page for electric vehicles — buyers pick their state,
+            get matched to their sales rep, and land in a WhatsApp conversation in under 10 seconds."
+          </p>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Two versions -->
+      <div class="section">
+        <div class="section-label">A/B Testing</div>
+        <h2>Two versions, one codebase</h2>
+        <p>The page ships with two fully independent visual themes for A/B testing:</p>
+        <div class="cards">
+          <div class="card">
+            <h3>Version 1 — Orange Theme</h3>
+            <p>Bold ATOMI orange palette. High energy, urgency-focused. Easter badge included. Route: <code>/v1</code></p>
+          </div>
+          <div class="card gold">
+            <h3>Version 2 — Purple / Gold Theme</h3>
+            <p>Premium purple-to-gold gradient with floating particles animation. Luxury feel. Route: <code>/v2</code></p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Tech stack -->
+      <div class="section">
+        <div class="section-label">Technology</div>
+        <h2>Tech stack</h2>
+        <div class="tech-grid">
+          <span class="tech-badge">React 18</span>
+          <span class="tech-badge">Vite</span>
+          <span class="tech-badge">Tailwind CSS</span>
+          <span class="tech-badge">Framer Motion</span>
+          <span class="tech-badge">React Router v6</span>
+          <span class="tech-badge light">Static Site</span>
+          <span class="tech-badge light">Render.com Deploy</span>
+          <span class="tech-badge light">GitHub</span>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Business impact -->
+      <div class="section">
+        <div class="section-label">Business Value</div>
+        <h2>Why it matters</h2>
+        <div class="cards">
+          <div class="card green">
+            <h3>Faster sales cycle</h3>
+            <p>No form → email → wait loop. Buyer reaches the right rep on WhatsApp in seconds.</p>
+          </div>
+          <div class="card purple">
+            <h3>Right rep, right buyer</h3>
+            <p>Automated routing by state ensures no lead lands with the wrong salesperson.</p>
+          </div>
+          <div class="card">
+            <h3>Zero hosting cost</h3>
+            <p>Deployed as a static site on Render's free tier. No server, no maintenance overhead.</p>
+          </div>
+          <div class="card gold">
+            <h3>A/B ready</h3>
+            <p>Two visual variants share the same components — easy to measure which theme converts better.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div>
+        <strong>ATOMI Pack Shoroow</strong> — Promotional Landing Page<br>
+        <span>Easter Campaign · February / March 2026 · Brazil</span>
+      </div>
+      <div style="text-align:right">
+        <span>Built with React + Vite + Tailwind CSS</span><br>
+        <span>Deployed on Render.com</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
