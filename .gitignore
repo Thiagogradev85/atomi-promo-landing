@@ -35,3 +35,6 @@ pnpm-debug.log*
 
 # OS files
 Thumbs.db
+
+# Claude Code local config
+.claude/settings.json
