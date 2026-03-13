@@ -80,7 +80,7 @@ export default function LandingV2() {
       <motion.div
         initial={{ y: -40 }}
         animate={{ y: 0 }}
-        className="relative z-[60] text-xs font-bold text-center py-2 px-4 flex items-center justify-center gap-2"
+        className="fixed top-0 left-0 right-0 h-8 z-[60] text-xs font-bold text-center flex items-center justify-center gap-2"
         style={{
           background: 'linear-gradient(90deg, #5B21B6, #7C3AED, #D4AF37, #7C3AED, #5B21B6)',
           backgroundSize: '200% auto',
@@ -88,7 +88,7 @@ export default function LandingV2() {
         }}
       >
         <span className="text-white">
-          🐰 PROMOÇÃO DE PÁSCOA PACK SHOROOW — FEV/MAR 2026 — BIKES & PATINETES ELÉTRICOS ATOMI 🥚
+          🐰 PROMOÇÃO DE PÁSCOA PACK SHOROOW — FEV/ABR 2026 — BIKES & PATINETES ELÉTRICOS ATOMI 🥚
         </span>
       </motion.div>
 

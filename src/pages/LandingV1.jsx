@@ -37,10 +37,10 @@ export default function LandingV1() {
       <motion.div
         initial={{ y: -40 }}
         animate={{ y: 0 }}
-        className="bg-atomi-orange text-white text-xs font-bold text-center py-2 px-4 flex items-center justify-center gap-2 z-[60] relative"
+        className="fixed top-0 left-0 right-0 h-8 bg-atomi-orange text-white text-xs font-bold text-center flex items-center justify-center gap-2 z-[60]"
       >
         <FaFire className="animate-pulse" />
-        <span>🐰 PROMOÇÃO DE PÁSCOA PACK SHOROOW — FEV/MAR 2026 — ESTOQUE LIMITADO! 🥚</span>
+        <span>🐰 PROMOÇÃO DE PÁSCOA PACK SHOROOW — FEV/ABR 2026 — ESTOQUE LIMITADO! 🥚</span>
         <FaFire className="animate-pulse" />
       </motion.div>
 

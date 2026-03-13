@@ -17,7 +17,7 @@ export default function HeroBanner({ variant = 'orange' }) {
   return (
     <section
       id="inicio"
-      className={`relative min-h-screen flex flex-col items-center justify-center overflow-hidden ${
+      className={`relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-28 ${
         isOrange ? 'bg-hero-dark' : 'bg-hero-purple'
       } bg-hero-pattern`}
     >
@@ -51,7 +51,7 @@ export default function HeroBanner({ variant = 'orange' }) {
             : 'border-atomi-gold/40 text-atomi-gold bg-atomi-gold/10'
         }`}>
           <FaFire className="animate-pulse" />
-          <span>PACK SHOROOW — FEV/MAR 2026</span>
+          <span>PACK SHOROOW — FEV/ABR 2026</span>
           <FaFire className="animate-pulse" />
         </div>
       </motion.div>
@@ -110,7 +110,7 @@ export default function HeroBanner({ variant = 'orange' }) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7 }}
-        className="relative z-10 text-center"
+        className="relative z-10 text-center mb-24 sm:mb-28"
       >
         <p className="text-gray-500 text-xs uppercase tracking-widest mb-3 font-medium">
           ⏰ Promoção encerra em
