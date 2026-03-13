@@ -15,7 +15,7 @@ export default function Footer({ variant = 'orange' }) {
             <h2 className={`font-display text-4xl tracking-widest ${accentColor} mb-3`}>
               ATOMI
             </h2>
-            <p className="text-gray-400 text-sm mb-1 font-semibold">PACK SHOROOW</p>
+
             <p className="text-gray-500 text-sm leading-relaxed mb-5 max-w-sm">
               Fabricando as melhores scooters e bikes elétricas do mundo desde 2000.
               Mais de 20 países. Qualidade certificada.
@@ -53,21 +53,25 @@ export default function Footer({ variant = 'orange' }) {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-gray-500 text-sm">
                 <MdEmail className={accentColor} size={16} />
-                contato@atomiscooters.com
+                leandro.nivelatomi@gmail.com
               </li>
-              <li className="flex items-center gap-2 text-gray-500 text-sm">
+              <li className="flex items-center gap-2 text-sm">
                 <MdPhone className={accentColor} size={16} />
-                +55 (00) 00000-0000
+                <a href="https://wa.me/5511915467196" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-green-400 transition-colors">
+                  +55 11 91546-7196
+                </a>
               </li>
-              <li className="flex items-start gap-2 text-gray-500 text-sm">
+              <li className="flex items-start gap-2 text-sm">
                 <MdLocationOn className={`${accentColor} mt-0.5`} size={16} />
-                <span>www.atomiscooters.com</span>
+                <a href="https://www.atomiscooters.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-300 transition-colors">
+                  www.atomiscooters.com
+                </a>
               </li>
             </ul>
 
             <div className={`mt-5 p-3 border ${borderColor} rounded-xl`}>
               <p className="text-gray-400 text-xs font-medium mb-1">🚨 PROMOÇÃO VÁLIDA ATÉ</p>
-              <p className={`${accentColor} font-bold text-sm`}>31 de Março de 2026</p>
+              <p className={`${accentColor} font-bold text-sm`}>30 de Abril de 2026</p>
               <p className="text-gray-600 text-xs mt-1">Mínimo 4 unidades por pedido</p>
             </div>
           </div>
@@ -76,7 +80,10 @@ export default function Footer({ variant = 'orange' }) {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-gray-600 text-xs text-center">
-            © 2026 ATOMI Pack Shoroow. Todos os direitos reservados.
+            © 2026 Atomi. Todos os direitos reservados.
+          </p>
+          <p className="text-gray-600 text-xs text-center">
+            Desenvolvido por <span className="text-gray-400 font-semibold">Thiago Gramuglia</span>
           </p>
           <p className="text-gray-600 text-xs flex items-center gap-1">
             Certificações:

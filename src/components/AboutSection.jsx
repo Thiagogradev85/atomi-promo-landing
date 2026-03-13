@@ -46,7 +46,7 @@ export default function AboutSection({ variant = 'orange' }) {
               scooters disponíveis no mercado.
             </p>
             <p className="text-gray-400 leading-relaxed mb-8">
-              Hoje nossas inovações elétnicas abrangem mais de{' '}
+              Hoje nossas inovações elétricas abrangem mais de{' '}
               <span className={`${accentColor} font-bold`}>15 países</span> e colaborações com os
               maiores players do setor. Decidimos trazer nossos produtos diretamente para você, o
               consumidor — com todas as nossas patentes da indústria e as mais recentes tecnologias.

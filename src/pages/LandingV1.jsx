@@ -15,7 +15,7 @@ function EasterBadge() {
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.8, type: 'spring' }}
-      className="fixed top-24 right-4 z-40 hidden lg:block"
+      className="fixed top-32 right-4 z-40 hidden lg:block"
     >
       <motion.div
         animate={{ rotate: [0, 5, -5, 0] }}

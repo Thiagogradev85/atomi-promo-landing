@@ -101,9 +101,9 @@ export default function SellerModal({ seller, stateName, onClose, variant = 'ora
             href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`w-full ${waBtnClass} text-white font-black py-4 rounded-xl flex items-center justify-center gap-3 transition-all duration-200 text-base`}
+            className={`w-full ${waBtnClass} text-white font-black py-4 px-6 rounded-xl flex items-center justify-center gap-3 transition-all duration-200 text-base`}
           >
-            <FaWhatsapp size={22} />
+            <FaWhatsapp size={22} className="shrink-0" />
             Falar com {seller.name} no WhatsApp
           </a>
 

@@ -2,19 +2,35 @@
 export const salespeople = [
   {
     id: 1,
-    name: 'Leandro',
-    photo: '/vendedores/leandro.jpg', // Coloque a foto em public/vendedores/leandro.jpg
-    whatsapp: '5500000000001', // Substitua pelo número real do Leandro (ex: 5521999999999)
-    states: ['RJ', 'ES'],
-    stateNames: ['Rio de Janeiro', 'Espírito Santo'],
+    name: 'Leandro Araujo',
+    photo: '/vendedores/leandro.jpg',
+    whatsapp: '5511915467196',
+    states: ['MG', 'ES', 'RJ', 'AC', 'AP', 'AM', 'MA', 'PA', 'PI', 'RO', 'RR'],
+    stateNames: ['Minas Gerais', 'Espírito Santo', 'Rio de Janeiro', 'Acre', 'Amapá', 'Amazonas', 'Maranhão', 'Pará', 'Piauí', 'Rondônia', 'Roraima'],
   },
   {
     id: 2,
     name: 'Thiago',
-    photo: '/vendedores/thiago.jpg', // Coloque a foto em public/vendedores/thiago.jpg
+    photo: '/vendedores/thiago.jpg',
     whatsapp: '5511923165330',
     states: ['MT', 'MS', 'TO', 'SE', 'PR'],
     stateNames: ['Mato Grosso', 'Mato Grosso do Sul', 'Tocantins', 'Sergipe', 'Paraná'],
+  },
+  {
+    id: 3,
+    name: 'Stefanni',
+    photo: '/vendedores/stefanni.jpg',
+    whatsapp: '5511923165330', // Substitua pelo número real da Stefanni
+    states: ['SC', 'RS', 'GO', 'SP', 'DF'],
+    stateNames: ['Santa Catarina', 'Rio Grande do Sul', 'Goiás', 'São Paulo', 'Distrito Federal'],
+  },
+  {
+    id: 4,
+    name: 'Daniela',
+    photo: '/vendedores/daniela.jpg',
+    whatsapp: '5511923165330', // Substitua pelo número real da Daniela
+    states: ['AL', 'PE', 'CE', 'BA', 'RN', 'PB'],
+    stateNames: ['Alagoas', 'Pernambuco', 'Ceará', 'Bahia', 'Rio Grande do Norte', 'Paraíba'],
   },
 ];
 

@@ -31,7 +31,7 @@ function ProductImage({ product }) {
       <img
         src={sources[srcIndex]}
         alt={`ATOMI ${product.name}`}
-        className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+        className="w-full h-full object-contain pt-16 transition-transform duration-500 group-hover:scale-105"
         onError={() => setSrcIndex((i) => i + 1)}
       />
     );
@@ -85,7 +85,7 @@ export default function ProductCard({ product, variant = 'orange', index = 0 }) 
           -{discount}% OFF
         </span>
         {product.badge && (
-          <span className={`${isOrange ? 'bg-white text-black' : 'bg-atomi-gold text-black'} text-xs font-black px-2.5 py-1 rounded-full`}>
+          <span className="bg-black/40 backdrop-blur-sm text-white text-xs font-black px-2.5 py-1 rounded-full border border-white/30">
             {product.badge}
           </span>
         )}
@@ -99,7 +99,7 @@ export default function ProductCard({ product, variant = 'orange', index = 0 }) 
       </div>
 
       {/* Product Image */}
-      <div className="relative h-56 overflow-hidden bg-black">
+      <div className="relative h-64 sm:h-80 overflow-hidden bg-[#f0efee]">
         <ProductImage product={product} />
         {product.highlight && (
           <div className={`absolute inset-0 border-2 ${isOrange ? 'border-atomi-orange/20' : 'border-atomi-gold/20'} pointer-events-none`} />
