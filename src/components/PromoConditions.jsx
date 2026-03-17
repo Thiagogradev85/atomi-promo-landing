@@ -140,7 +140,7 @@ export default function PromoConditions({ variant = 'orange' }) {
                   { model: 'L10', cat: 'Patinete', from: 3480, to: 3349 },
                   { model: 'ZX202', cat: 'E-Bike Fat', from: 4980, to: 4749 },
                   { model: 'ZX201', cat: 'E-Bike Dobrável', from: 4980, to: 4749 },
-                  { model: 'ZX161', cat: 'E-Bike Dobrável', from: 4980, to: 2579 },
+                  { model: 'ZX161', cat: 'E-Bike Dobrável', from: 2980, to: 2579 },
                   { model: 'C1', cat: 'Patinete c/ Banco', from: 1980, to: 1849 },
                 ].map((row, i) => (
                   <tr key={row.model} className={`border-b border-gray-800/50 ${i % 2 === 0 ? 'bg-black/20' : ''}`}>

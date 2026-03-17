@@ -91,7 +91,7 @@ export const products = [
     name: 'ZX161',
     category: 'e-bike',
     categoryLabel: 'E-Bike Dobrável',
-    originalPrice: 4980,
+    originalPrice: 2980,
     promoPrice: 2579,
     battery: '36V 7.8Ah',
     motor: '350W–650W',
