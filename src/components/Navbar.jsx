@@ -38,10 +38,12 @@ export default function Navbar({ variant = 'orange' }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <span className={`font-display text-3xl tracking-widest ${accentColor}`}>
-              ATOMI
-            </span>
+          <a href="#" className="flex items-center gap-3">
+            <img
+              src="/images/atomi-logo.png"
+              alt="Atomi"
+              className="h-8 md:h-10 w-auto"
+            />
             <span className="text-gray-400 text-xs font-medium hidden sm:block">
               PACK SHOWROOM
             </span>

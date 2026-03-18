@@ -1,4 +1,5 @@
-import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
 
 export default function Footer({ variant = 'orange' }) {
@@ -12,19 +13,28 @@ export default function Footer({ variant = 'orange' }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <h2 className={`font-display text-4xl tracking-widest ${accentColor} mb-3`}>
-              ATOMI
-            </h2>
+            <img
+              src="/images/atomi-logo.png"
+              alt="Atomi"
+              className="h-10 w-auto mb-3"
+            />
 
             <p className="text-gray-500 text-sm leading-relaxed mb-5 max-w-sm">
               Fabricando as melhores scooters e bikes elétricas do mundo desde 2000.
               Mais de 20 países. Qualidade certificada.
             </p>
             <div className="flex gap-3">
-              {[FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin].map((Icon, i) => (
+              {[
+                { Icon: FaWhatsapp, href: 'https://wa.me/5511915467196' },
+                { Icon: FaInstagram, href: 'https://www.instagram.com/atomiscooterbrasil/' },
+                { Icon: FaFacebook, href: 'https://www.facebook.com/atomiscooters/' },
+                { Icon: FaXTwitter, href: 'https://x.com/atomiscooters' },
+              ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`w-9 h-9 rounded-full border ${borderColor} flex items-center justify-center text-gray-400 hover:${accentColor} hover:border-current transition-colors duration-200`}
                 >
                   <Icon size={16} />
@@ -63,7 +73,7 @@ export default function Footer({ variant = 'orange' }) {
               </li>
               <li className="flex items-start gap-2 text-sm">
                 <MdLocationOn className={`${accentColor} mt-0.5`} size={16} />
-                <a href="https://www.atomiscooters.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-300 transition-colors">
+                <a href="https://www.atomiscooters.com/pt-br" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-300 transition-colors">
                   www.atomiscooters.com
                 </a>
               </li>

@@ -219,6 +219,27 @@ export default function ContactForm({ variant = 'orange' }) {
                   Selecione um estado para ver o consultor disponível
                 </p>
               )}
+
+              {/* Informações Oficiais de Pagamento */}
+              <div className="mt-6 border border-yellow-500/40 bg-yellow-500/5 rounded-xl p-5">
+                <p className="text-yellow-400 font-bold text-sm mb-3 flex items-center gap-2">
+                  🇧🇷 Informações Oficiais de Pagamento – Brasil
+                </p>
+                <ul className="space-y-1.5 text-sm text-gray-300 mb-4">
+                  <li><span className="text-gray-500">Banco:</span> Itaú Unibanco</li>
+                  <li><span className="text-gray-500">Empresa:</span> SAO PAULO ANNO COML IMPORTADOR</li>
+                  <li><span className="text-gray-500">CNPJ:</span> 58.470.614/0001-17</li>
+                  <li><span className="text-gray-500">Agência:</span> 7257</li>
+                  <li><span className="text-gray-500">Conta:</span> 99774-7</li>
+                  <li><span className="text-gray-500">PIX:</span> 58.470.614/0001-17</li>
+                </ul>
+                <div className="border-t border-yellow-500/20 pt-3 flex items-start gap-2">
+                  <span className="text-yellow-400 text-base leading-none mt-0.5">⚠️</span>
+                  <p className="text-yellow-400/80 text-xs leading-relaxed font-medium">
+                    Atenção: qualquer outra conta é falsa e não autorizada pela nossa empresa.
+                  </p>
+                </div>
+              </div>
             </motion.div>
 
           </div>
