@@ -8,8 +8,47 @@ import WhatsAppButton from '../components/WhatsAppButton';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
 import { FaFire } from 'react-icons/fa';
+import { useTheme } from '../context/ThemeContext';
 
-function EasterBadge() {
+// Floating particles — only shown in gold (V2) theme
+function Particles() {
+  const particles = Array.from({ length: 20 }, (_, i) => ({
+    id: i,
+    size: Math.random() * 6 + 2,
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    delay: Math.random() * 4,
+    duration: Math.random() * 4 + 4,
+    color: i % 2 === 0 ? '#108474' : '#EA6400',
+  }));
+
+  return (
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+      {particles.map((p) => (
+        <motion.div
+          key={p.id}
+          className="absolute rounded-full opacity-20"
+          style={{
+            width: p.size,
+            height: p.size,
+            left: `${p.x}%`,
+            top: `${p.y}%`,
+            backgroundColor: p.color,
+          }}
+          animate={{ y: [0, -30, 0], opacity: [0.1, 0.3, 0.1] }}
+          transition={{
+            delay: p.delay,
+            duration: p.duration,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
+function EasterBadge({ variant }) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
@@ -20,7 +59,7 @@ function EasterBadge() {
       <motion.div
         animate={{ rotate: [0, 5, -5, 0] }}
         transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
-        className="easter-badge-orange text-white text-xs font-black px-3 py-2 rounded-full text-center shadow-xl"
+        className={`${variant === 'gold' ? 'easter-badge' : 'easter-badge-orange'} text-white text-xs font-black px-3 py-2 rounded-full text-center shadow-xl`}
       >
         <div className="text-lg">🐰</div>
         <div>PÁSCOA</div>
@@ -31,27 +70,53 @@ function EasterBadge() {
 }
 
 export default function LandingV1() {
-  return (
-    <div className="min-h-screen bg-atomi-black">
-      {/* Top urgency bar */}
-      <motion.div
-        initial={{ y: -40 }}
-        animate={{ y: 0 }}
-        className="fixed top-0 left-0 right-0 h-8 bg-atomi-orange text-white text-xs font-bold text-center flex items-center justify-center gap-2 z-[60]"
-      >
-        <FaFire className="animate-pulse" />
-        <span>🐰 PROMOÇÃO DE PÁSCOA PACK SHOWROOM — FEV/ABR 2026 — ESTOQUE LIMITADO! 🥚</span>
-        <FaFire className="animate-pulse" />
-      </motion.div>
+  const { variant } = useTheme();
+  const isGold = variant === 'gold';
 
-      <EasterBadge />
-      <Navbar variant="orange" />
-      <HeroBanner variant="orange" />
-      <ProductsSection variant="orange" />
-      <PromoConditions variant="orange" />
-      <AboutSection variant="orange" />
-      <ContactForm variant="orange" />
-      <Footer variant="orange" />
+  return (
+    <div className={`min-h-screen relative ${isGold ? 'bg-hero-purple' : 'bg-atomi-black'}`}>
+      {isGold && <Particles />}
+
+      {/* Top urgency bar */}
+      {isGold ? (
+        <motion.div
+          initial={{ y: -40 }}
+          animate={{ y: 0 }}
+          className="fixed top-0 left-0 right-0 h-8 z-[60] text-xs font-bold text-center flex items-center justify-center gap-2"
+          style={{
+            background: 'linear-gradient(90deg, #0d6b5e, #108474, #EA6400, #108474, #0d6b5e)',
+            backgroundSize: '200% auto',
+            animation: 'shimmer 4s linear infinite',
+          }}
+        >
+          <span className="text-white">
+            🐰 PROMOÇÃO DE PÁSCOA PACK SHOWROOM — FEV/ABR 2026 — BIKES & PATINETES ELÉTRICOS ATOMI 🥚
+          </span>
+        </motion.div>
+      ) : (
+        <motion.div
+          initial={{ y: -40 }}
+          animate={{ y: 0 }}
+          className="fixed top-0 left-0 right-0 h-8 bg-atomi-orange text-white text-xs font-bold text-center flex items-center justify-center gap-2 z-[60]"
+        >
+          <FaFire className="animate-pulse" />
+          <span>🐰 PROMOÇÃO DE PÁSCOA PACK SHOWROOM — FEV/ABR 2026 — ESTOQUE LIMITADO! 🥚</span>
+          <FaFire className="animate-pulse" />
+        </motion.div>
+      )}
+
+      <EasterBadge variant={variant} />
+      <Navbar variant={variant} />
+
+      <div className="relative z-10">
+        <HeroBanner variant={variant} />
+        <ProductsSection variant={variant} />
+        <PromoConditions variant={variant} />
+        <AboutSection variant={variant} />
+        <ContactForm variant={variant} />
+        <Footer variant={variant} />
+      </div>
+
       <WhatsAppButton />
     </div>
   );

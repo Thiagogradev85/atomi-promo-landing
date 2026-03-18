@@ -231,7 +231,7 @@
       overflow: hidden;
     }
     .version-card.v1 { background: linear-gradient(145deg, #151005 0%, #0f0f0f 100%); }
-    .version-card.v2 { background: linear-gradient(145deg, #0e0814 0%, #0f0f0f 100%); }
+    .version-card.v2 { background: linear-gradient(145deg, #181e1d 0%, #1D1D1D 100%); }
     .version-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
     .version-card .accent { display: inline-block; padding: 4px 14px; border-radius: 999px; font-size: 12px; font-weight: 700; margin-bottom: 20px; }
     .v1 .accent { background: rgba(249,115,22,.15); color: var(--orange); }
@@ -280,6 +280,70 @@
     }
     .quote-block cite { display: block; margin-top: 10px; font-style: normal; font-size: 12px; color: var(--muted); }
 
+    /* ── BROWSER FRAME ── */
+    .browser-frame {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #2a2a2a;
+      background: #111;
+      box-shadow: 0 24px 64px rgba(0,0,0,.5);
+    }
+    .browser-bar {
+      background: #1e1e1e;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid #2a2a2a;
+    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+    .browser-url {
+      margin-left: 10px;
+      background: #2a2a2a;
+      border-radius: 6px;
+      padding: 3px 12px;
+      font-size: 11px;
+      color: #666;
+      flex: 1;
+      max-width: 280px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .screen-area {
+      position: relative;
+      min-height: 300px;
+      overflow: hidden;
+    }
+    .screen-area img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+    .placeholder-msg {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 300px;
+      background: repeating-linear-gradient(
+        45deg,
+        #111 0px,
+        #111 10px,
+        #141414 10px,
+        #141414 20px
+      );
+      border: 1px dashed rgba(249,115,22,.25);
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+      padding: 24px;
+    }
+    .placeholder-msg strong { color: var(--orange); font-size: 14px; }
+
     /* animations */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -304,10 +368,32 @@
     in seconds.
   </p>
   <div class="hero-cta">
-    <a href="#solution" class="btn btn-primary">See How It Works</a>
-    <a href="#roi"      class="btn btn-outline">View ROI Numbers</a>
+    <a href="#solution"     class="btn btn-primary">See How It Works</a>
+    <a href="#integration" class="btn btn-outline">Deployment Strategy</a>
   </div>
 </section>
+
+<!-- ════════════════════════  DEMO BANNER  ════════════════════════ -->
+<div style="background:linear-gradient(90deg,rgba(96,165,250,.08),rgba(96,165,250,.14),rgba(96,165,250,.08)); border-top:1px solid rgba(96,165,250,.2); border-bottom:1px solid rgba(96,165,250,.2); padding:20px 24px; text-align:center;">
+  <div style="max-width:860px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px 24px;">
+    <span style="font-size:20px;">🌐</span>
+    <div style="text-align:left;">
+      <p style="font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#60a5fa; margin-bottom:3px;">Temporary Demo — For Presentation &amp; Sales Purposes Only</p>
+      <p style="font-size:13px; color:#666; line-height:1.5;">
+        The live landing page is available for review at:
+        <a href="https://atomi-promo-landing.onrender.com/" target="_blank" rel="noopener"
+           style="color:#60a5fa; font-weight:700; margin-left:4px; text-decoration:none; word-break:break-all;">
+          https://atomi-promo-landing.onrender.com/
+        </a>
+        &nbsp;·&nbsp; <span style="font-size:12px; color:#555;">This URL is temporary. Final deployment will use ATOMI's own domain.</span>
+      </p>
+    </div>
+    <a href="https://atomi-promo-landing.onrender.com/" target="_blank" rel="noopener"
+       style="flex-shrink:0; padding:10px 20px; background:#60a5fa; color:#000; font-weight:800; font-size:13px; border-radius:8px; text-decoration:none; white-space:nowrap;">
+      View Live Demo →
+    </a>
+  </div>
+</div>
 
 <!-- ════════════════════════  PROBLEM  ════════════════════════ -->
 <section class="problem">
@@ -455,33 +541,78 @@
 <section class="versions">
   <div class="container">
     <p class="section-label">Design System</p>
-    <h2 class="section-title">Two themes. <span>Zero extra cost.</span></h2>
-    <p class="section-desc">
-      Both campaign designs are included and production-ready. Switch between them
-      or A/B test to see which converts better with your audience.
+    <h2 class="section-title">Two themes. <span>One purpose.</span></h2>
+    <p class="section-desc" style="margin-bottom:12px;">
+      Both versions are included and production-ready. They serve different
+      strategic goals — choose based on where and how you want to position the campaign.
     </p>
+
+    <!-- purpose callout -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:36px;">
+      <div style="padding:16px 20px; background:rgba(249,115,22,.07); border:1px solid rgba(249,115,22,.2); border-radius:10px; font-size:13.5px; color:#ccc; line-height:1.6;">
+        <strong style="color:#F97316; display:block; margin-bottom:5px;">🔥 V1 — Max-impact marketing</strong>
+        Pure black + blazing orange creates a visceral urgency that stops the scroll.
+        Ideal for <strong style="color:#fff;">paid ads, email blasts, WhatsApp campaigns</strong> where you
+        compete for attention against dozens of other messages.
+      </div>
+      <div style="padding:16px 20px; background:rgba(16,132,116,.07); border:1px solid rgba(16,132,116,.25); border-radius:10px; font-size:13.5px; color:#ccc; line-height:1.6;">
+        <strong style="color:#108474; display:block; margin-bottom:5px;">🌐 V2 — Official brand identity</strong>
+        Colors extracted directly from <a href="https://www.atomiscooters.com/pt-br" target="_blank" rel="noopener" style="color:#108474; text-decoration:none;">atomiscooters.com</a>
+        — charcoal <code style="background:#1e1e1e;padding:1px 5px;border-radius:3px;font-size:11px;">#1D1D1D</code>, brand orange
+        <code style="background:#1e1e1e;padding:1px 5px;border-radius:3px;font-size:11px;">#EA6400</code>
+        and teal <code style="background:#1e1e1e;padding:1px 5px;border-radius:3px;font-size:11px;">#108474</code>.
+        Ideal for the <strong style="color:#fff;">banner on the main website</strong> — buyers feel visual continuity from the site into the promo.
+      </div>
+    </div>
+
     <div class="version-cards">
       <div class="version-card v1">
         <h3>Version 1 · Dark Orange</h3>
-        <span class="accent">Standard Campaign</span>
+        <span class="accent">Marketing &amp; Ads · High Impact</span>
         <ul>
-          <li>High-contrast orange accent on pure black</li>
-          <li>Matches ATOMI's main catalog identity</li>
-          <li>Clean, industrial aesthetic for B2B buyers</li>
-          <li>Optimized for product-first browsing</li>
+          <li>Pure black (#0a0a0a) + blazing orange (#F97316) — maximum contrast</li>
+          <li>Aggressive visual hierarchy that forces the eye to the CTA</li>
+          <li>Designed to win attention in noisy channels (social, email, WhatsApp)</li>
+          <li>Best for cold audiences who don't know the brand yet</li>
         </ul>
       </div>
-      <div class="version-card v2">
-        <h3>Version 2 · Purple &amp; Gold</h3>
-        <span class="accent">Easter / Seasonal Edition</span>
+      <div class="version-card v2" style="border-color:rgba(16,132,116,.3);">
+        <h3>Version 2 · Official Brand</h3>
+        <span class="accent" style="background:rgba(16,132,116,.15); color:#108474;">atomiscooters.com Identity</span>
         <ul>
-          <li>Premium purple/gold palette for seasonal promos</li>
-          <li>Animated floating particle background</li>
-          <li>Shimmer and glow micro-interactions</li>
-          <li>Easter 2026 branding built-in</li>
+          <li>Charcoal (#1D1D1D) + official orange (#EA6400) + teal (#108474)</li>
+          <li>Exact palette of the official ATOMI website — visual continuity</li>
+          <li>Animated teal/orange particles and brand-accurate glow effects</li>
+          <li>Best for warm audiences arriving from the main site banner</li>
         </ul>
       </div>
     </div>
+
+    <!-- when to use each -->
+    <div style="margin-top:32px; padding:24px 28px; background:rgba(255,255,255,.03); border:1px solid #1e1e1e; border-radius:12px;">
+      <h4 style="font-size:14px; font-weight:700; margin-bottom:16px; color:#ccc;">When to use each version</h4>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+        <div>
+          <p style="font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#F97316; margin-bottom:10px;">V1 — Orange</p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:7px;">
+            <li style="font-size:13px; color:var(--muted); display:flex; gap:8px;"><span style="color:#F97316;">✓</span> Instagram &amp; Facebook Ads</li>
+            <li style="font-size:13px; color:var(--muted); display:flex; gap:8px;"><span style="color:#F97316;">✓</span> WhatsApp bulk campaigns</li>
+            <li style="font-size:13px; color:var(--muted); display:flex; gap:8px;"><span style="color:#F97316;">✓</span> Email marketing blasts</li>
+            <li style="font-size:13px; color:var(--muted); display:flex; gap:8px;"><span style="color:#F97316;">✓</span> Cold outreach to new distributors</li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#108474; margin-bottom:10px;">V2 — Official Brand</p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:7px;">
+            <li style="font-size:13px; color:var(--muted); display:flex; gap:8px;"><span style="color:#108474;">✓</span> Banner on atomiscooters.com</li>
+            <li style="font-size:13px; color:var(--muted); display:flex; gap:8px;"><span style="color:#108474;">✓</span> Direct share with existing partners</li>
+            <li style="font-size:13px; color:var(--muted); display:flex; gap:8px;"><span style="color:#108474;">✓</span> Trade show or in-person presentations</li>
+            <li style="font-size:13px; color:var(--muted); display:flex; gap:8px;"><span style="color:#108474;">✓</span> Official brand materials &amp; QR codes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -615,6 +746,697 @@
   </div>
 </section>
 
+<!-- ════════════════════════  INTEGRATION  ════════════════════════ -->
+<section id="integration" style="background:var(--dark); padding:96px 24px;">
+  <div class="container">
+    <p class="section-label">Deployment Strategy</p>
+    <h2 class="section-title">How to plug it into <span>atomiscooters.com</span></h2>
+    <p class="section-desc" style="margin-bottom:48px;">
+      The landing page is not meant to replace the main website — it runs
+      alongside it as a dedicated, high-conversion destination for a specific
+      promotion. Here is the recommended flow:
+    </p>
+
+    <!-- FLOW DIAGRAM -->
+    <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:0; margin-bottom:64px;">
+
+      <div style="text-align:center; padding:24px 20px; background:var(--card); border:1px solid #1e1e1e; border-radius:14px; min-width:160px; flex:1; max-width:200px;">
+        <div style="font-size:32px; margin-bottom:10px;">🌐</div>
+        <div style="font-size:13px; font-weight:700; margin-bottom:4px;">atomiscooters.com</div>
+        <div style="font-size:11px; color:var(--muted);">Main website<br>Brand &amp; catalog</div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; align-items:center; padding:0 12px; color:var(--orange); flex-shrink:0;">
+        <div style="font-size:10px; font-weight:700; letter-spacing:1px; color:var(--muted); margin-bottom:4px; white-space:nowrap;">Visitor clicks</div>
+        <div style="font-size:28px; line-height:1;">→</div>
+      </div>
+
+      <div style="text-align:center; padding:24px 20px; background:rgba(249,115,22,.08); border:1px solid var(--border); border-radius:14px; min-width:160px; flex:1; max-width:200px; position:relative;">
+        <div style="position:absolute; top:-10px; left:50%; transform:translateX(-50%); background:var(--orange); color:#fff; font-size:10px; font-weight:800; padding:3px 10px; border-radius:999px; white-space:nowrap;">KEY TOUCHPOINT</div>
+        <div style="font-size:32px; margin-bottom:10px;">🎯</div>
+        <div style="font-size:13px; font-weight:700; margin-bottom:4px;">Promo Banner</div>
+        <div style="font-size:11px; color:var(--muted);">Homepage or<br>dedicated section</div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; align-items:center; padding:0 12px; color:var(--orange); flex-shrink:0;">
+        <div style="font-size:10px; font-weight:700; letter-spacing:1px; color:var(--muted); margin-bottom:4px; white-space:nowrap;">Redirects to</div>
+        <div style="font-size:28px; line-height:1;">→</div>
+      </div>
+
+      <div style="text-align:center; padding:24px 20px; background:rgba(212,175,55,.07); border:1px solid rgba(212,175,55,.3); border-radius:14px; min-width:160px; flex:1; max-width:200px;">
+        <div style="font-size:32px; margin-bottom:10px;">⚡</div>
+        <div style="font-size:13px; font-weight:700; margin-bottom:4px; color:var(--gold);">Landing Page SPA</div>
+        <div style="font-size:11px; color:var(--muted);">100% focused on<br>conversion &amp; order</div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; align-items:center; padding:0 12px; color:var(--orange); flex-shrink:0;">
+        <div style="font-size:10px; font-weight:700; letter-spacing:1px; color:var(--muted); margin-bottom:4px; white-space:nowrap;">Buyer contacts</div>
+        <div style="font-size:28px; line-height:1;">→</div>
+      </div>
+
+      <div style="text-align:center; padding:24px 20px; background:rgba(37,211,102,.07); border:1px solid rgba(37,211,102,.2); border-radius:14px; min-width:160px; flex:1; max-width:200px;">
+        <div style="font-size:32px; margin-bottom:10px;">💬</div>
+        <div style="font-size:13px; font-weight:700; margin-bottom:4px; color:#25d366;">Sales Team</div>
+        <div style="font-size:11px; color:var(--muted);">WhatsApp / form<br>lead captured</div>
+      </div>
+
+    </div>
+
+    <!-- WHY BANNER -->
+    <div class="two-col" style="margin-bottom:56px;">
+      <div>
+        <h3 style="font-size:1.4rem; font-weight:800; margin-bottom:14px;">Why a <span style="color:var(--orange);">banner on the main site</span> is the right entry point</h3>
+        <p style="color:var(--muted); font-size:14px; line-height:1.75; margin-bottom:16px;">
+          The main ATOMI website (<a href="https://www.atomiscooters.com/pt-br" target="_blank" rel="noopener" style="color:var(--orange); text-decoration:none;">atomiscooters.com</a>)
+          already has organic traffic — visitors browsing products, checking specs,
+          looking for distributors. A promotional banner placed on the homepage or
+          product pages intercepts that traffic at peak intent and sends them into
+          a focused experience with one goal: <strong style="color:var(--text);">close the wholesale order</strong>.
+        </p>
+        <p style="color:var(--muted); font-size:14px; line-height:1.75;">
+          This is the industry-standard approach used by major e-commerce and B2B
+          brands. The landing page keeps buyers away from distractions (navigation
+          menus, other product lines, blog posts) and guides them straight to the
+          deal — discount, urgency, CTA.
+        </p>
+      </div>
+      <ul class="pain-list">
+        <li>
+          <span class="icon">🏹</span>
+          <div>
+            <h4>Zero distraction environment</h4>
+            <p>A landing page has no global navigation — buyers can't wander off to another section. Every scroll leads toward the order form.</p>
+          </div>
+        </li>
+        <li>
+          <span class="icon">📍</span>
+          <div>
+            <h4>Dedicated, shareable URL</h4>
+            <p>The promo URL (<code style="background:#1e1e1e; padding:2px 6px; border-radius:4px; font-size:12px;">atomiscooters.com/promo</code> or a subdomain) can be used in emails, WhatsApp blasts, QR codes on printed materials, and paid ads — all pointing to the same converting page.</p>
+          </div>
+        </li>
+        <li>
+          <span class="icon">📈</span>
+          <div>
+            <h4>Measurable conversion funnel</h4>
+            <p>With a separate URL it becomes trivial to measure banner click-through rate vs. landing page conversion rate — data that directly informs the next campaign budget.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- OTHER ENTRY POINTS -->
+    <p class="section-label" style="margin-bottom:16px;">Additional entry points — beyond the banner</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px;">
+
+      <div style="background:var(--card); border:1px solid #1e1e1e; border-radius:12px; padding:22px 20px; display:flex; gap:14px; align-items:flex-start;">
+        <span style="font-size:24px; flex-shrink:0;">📧</span>
+        <div>
+          <h4 style="font-size:14px; font-weight:700; margin-bottom:5px;">Email Marketing</h4>
+          <p style="font-size:12.5px; color:var(--muted);">One-click CTA button in newsletters and B2B email blasts links directly to the landing page.</p>
+        </div>
+      </div>
+
+      <div style="background:var(--card); border:1px solid #1e1e1e; border-radius:12px; padding:22px 20px; display:flex; gap:14px; align-items:flex-start;">
+        <span style="font-size:24px; flex-shrink:0;">💚</span>
+        <div>
+          <h4 style="font-size:14px; font-weight:700; margin-bottom:5px;">WhatsApp Broadcast</h4>
+          <p style="font-size:12.5px; color:var(--muted);">Sales reps share the promo URL directly with existing B2B contacts — no PDF attachment needed.</p>
+        </div>
+      </div>
+
+      <div style="background:var(--card); border:1px solid #1e1e1e; border-radius:12px; padding:22px 20px; display:flex; gap:14px; align-items:flex-start;">
+        <span style="font-size:24px; flex-shrink:0;">📱</span>
+        <div>
+          <h4 style="font-size:14px; font-weight:700; margin-bottom:5px;">Social &amp; Paid Ads</h4>
+          <p style="font-size:12.5px; color:var(--muted);">Instagram, LinkedIn and Google Ads campaigns point to the landing page — not the generic homepage.</p>
+        </div>
+      </div>
+
+      <div style="background:var(--card); border:1px solid #1e1e1e; border-radius:12px; padding:22px 20px; display:flex; gap:14px; align-items:flex-start;">
+        <span style="font-size:24px; flex-shrink:0;">📦</span>
+        <div>
+          <h4 style="font-size:14px; font-weight:700; margin-bottom:5px;">QR Code on Print</h4>
+          <p style="font-size:12.5px; color:var(--muted);">Flyers, packaging inserts, and trade show materials print a QR that lands buyers straight on the promo SPA.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════  SCREENSHOTS  ════════════════════════ -->
+<section id="screenshots" style="background:var(--dark); padding:96px 24px; border-top:1px solid #1a1a1a;">
+  <div class="container">
+    <p class="section-label">In Action</p>
+    <h2 class="section-title">Every section. <span>Every feature.</span></h2>
+    <p class="section-desc" style="margin-bottom:64px;">
+      A walkthrough of the landing page from top to bottom — hero, products,
+      countdown, contact and the two visual themes.
+    </p>
+
+    <!-- ── FEATURE 1: URGENCY BAR + HERO ── -->
+    <div class="two-col" style="margin-bottom:80px; gap:48px;">
+      <div style="order:2;">
+        <p class="section-label" style="margin-bottom:10px;">01 · Hero &amp; Urgency Bar</p>
+        <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:12px;">First impression in <span style="color:var(--orange);">under 2 seconds</span></h3>
+        <p style="color:var(--muted); font-size:14px; line-height:1.75; margin-bottom:20px;">
+          A fixed top bar with an animated flame icon keeps the urgency message
+          always visible as the user scrolls. The hero section loads with a
+          slide-in animation, bold headline, and a direct CTA button — no fluff,
+          no delay.
+        </p>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="display:flex; gap:10px; font-size:13.5px; color:var(--muted);"><span style="color:var(--orange);">→</span> Fixed urgency bar pinned to the top on all screen sizes</li>
+          <li style="display:flex; gap:10px; font-size:13.5px; color:var(--muted);"><span style="color:var(--orange);">→</span> Full-viewport hero with animated entrance (Framer Motion)</li>
+          <li style="display:flex; gap:10px; font-size:13.5px; color:var(--muted);"><span style="color:var(--orange);">→</span> Prominent "Garanta Agora" CTA scroll-anchored to products</li>
+          <li style="display:flex; gap:10px; font-size:13.5px; color:var(--muted);"><span style="color:var(--orange);">→</span> ATOMI logo + Easter branding badge (desktop only)</li>
+        </ul>
+      </div>
+      <div style="order:1;" class="browser-frame">
+        <div class="browser-bar">
+          <span class="dot" style="background:#ff5f56;"></span>
+          <span class="dot" style="background:#febc2e;"></span>
+          <span class="dot" style="background:#27c93f;"></span>
+          <span class="browser-url">localhost:5173/</span>
+        </div>
+        <div class="screen-area">
+          <img src="screenshots/01-hero.png" alt="Hero section screenshot"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="placeholder-msg">
+            <span style="font-size:32px;">📸</span>
+            <strong>01-hero.png</strong>
+            <span>Screenshot do Hero + Urgency Bar</span>
+            <span style="font-size:11px; color:#555;">Salve em public/screenshots/</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FEATURE 2: COUNTDOWN ── -->
+    <div class="two-col" style="margin-bottom:80px; gap:48px;">
+      <div>
+        <p class="section-label" style="margin-bottom:10px;">02 · Live Countdown Timer</p>
+        <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:12px;">Urgency you can <span style="color:var(--orange);">feel ticking</span></h3>
+        <p style="color:var(--muted); font-size:14px; line-height:1.75; margin-bottom:20px;">
+          A real-time countdown updates every second and counts down to the
+          exact end of the promotional window (April 2026). Psychological
+          scarcity is one of the most proven B2B conversion drivers — buyers
+          make faster decisions when they know the offer has an end date.
+        </p>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="display:flex; gap:10px; font-size:13.5px; color:var(--muted);"><span style="color:var(--orange);">→</span> Days / Hours / Minutes / Seconds — live update every tick</li>
+          <li style="display:flex; gap:10px; font-size:13.5px; color:var(--muted);"><span style="color:var(--orange);">→</span> Styled cards with glow effect in campaign accent color</li>
+          <li style="display:flex; gap:10px; font-size:13.5px; color:var(--muted);"><span style="color:var(--orange);">→</span> Deadline date configurable — reusable for any future promo</li>
+        </ul>
+      </div>
+      <div class="browser-frame">
+        <div class="browser-bar">
+          <span class="dot" style="background:#ff5f56;"></span>
+          <span class="dot" style="background:#febc2e;"></span>
+          <span class="dot" style="background:#27c93f;"></span>
+          <span class="browser-url">localhost:5173/#countdown</span>
+        </div>
+        <div class="screen-area">
+          <img src="screenshots/02-countdown.png" alt="Countdown timer screenshot"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="placeholder-msg">
+            <span style="font-size:32px;">📸</span>
+            <strong>02-countdown.png</strong>
+            <span>Screenshot do Countdown Timer</span>
+            <span style="font-size:11px; color:#555;">Salve em public/screenshots/</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FEATURE 3: PRODUCTS ── -->
+    <div class="two-col" style="margin-bottom:80px; gap:48px;">
+      <div style="order:2;">
+        <p class="section-label" style="margin-bottom:10px;">03 · Filterable Product Showcase</p>
+        <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:12px;">All 6 products. <span style="color:var(--orange);">Zero page reload.</span></h3>
+        <p style="color:var(--muted); font-size:14px; line-height:1.75; margin-bottom:20px;">
+          Buyers filter between E-Bikes and Electric Scooters with a single click.
+          Each product card shows the real photo, full technical specs, original
+          price, discount percentage, and the promotional price — everything a
+          B2B buyer needs to make a decision.
+        </p>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="display:flex; gap:10px; font-size:13.5px; color:var(--muted);"><span style="color:var(--orange);">→</span> Filter tabs: All / E-Bikes / Scooters — instant, no reload</li>
+          <li style="display:flex; gap:10px; font-size:13.5px; color:var(--muted);"><span style="color:var(--orange);">→</span> Product cards: photo, specs, original price, discount badge, promo price</li>
+          <li style="display:flex; gap:10px; font-size:13.5px; color:var(--muted);"><span style="color:var(--orange);">→</span> "Bestseller" and "Best Offer" highlight badges</li>
+          <li style="display:flex; gap:10px; font-size:13.5px; color:var(--muted);"><span style="color:var(--orange);">→</span> Minimum order (4 units) clearly shown on each card</li>
+        </ul>
+      </div>
+      <div style="order:1;" class="browser-frame">
+        <div class="browser-bar">
+          <span class="dot" style="background:#ff5f56;"></span>
+          <span class="dot" style="background:#febc2e;"></span>
+          <span class="dot" style="background:#27c93f;"></span>
+          <span class="browser-url">localhost:5173/#produtos</span>
+        </div>
+        <div class="screen-area">
+          <img src="screenshots/03-products.png" alt="Products section screenshot"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="placeholder-msg">
+            <span style="font-size:32px;">📸</span>
+            <strong>03-products.png</strong>
+            <span>Screenshot da Grade de Produtos</span>
+            <span style="font-size:11px; color:#555;">Salve em public/screenshots/</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FEATURE 4: CONTACT ── -->
+    <div class="two-col" style="margin-bottom:80px; gap:48px;">
+      <div>
+        <p class="section-label" style="margin-bottom:10px;">04 · Lead Capture &amp; WhatsApp CTA</p>
+        <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:12px;">Two ways to <span style="color:var(--orange);">capture every buyer</span></h3>
+        <p style="color:var(--muted); font-size:14px; line-height:1.75; margin-bottom:20px;">
+          Not every buyer wants to fill a form — some prefer instant messaging.
+          The page covers both: a structured contact form for formal inquiries,
+          and a persistent floating WhatsApp button visible on every section
+          for buyers who prefer direct chat.
+        </p>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+          <li style="display:flex; gap:10px; font-size:13.5px; color:var(--muted);"><span style="color:var(--orange);">→</span> Contact form: name, email, phone, message — goes to sales team</li>
+          <li style="display:flex; gap:10px; font-size:13.5px; color:var(--muted);"><span style="color:var(--orange);">→</span> Floating WhatsApp button — always visible, opens pre-filled chat</li>
+          <li style="display:flex; gap:10px; font-size:13.5px; color:var(--muted);"><span style="color:var(--orange);">→</span> Salesperson selector modal (choose which rep to contact)</li>
+        </ul>
+      </div>
+      <div class="browser-frame">
+        <div class="browser-bar">
+          <span class="dot" style="background:#ff5f56;"></span>
+          <span class="dot" style="background:#febc2e;"></span>
+          <span class="dot" style="background:#27c93f;"></span>
+          <span class="browser-url">localhost:5173/#contato</span>
+        </div>
+        <div class="screen-area">
+          <img src="screenshots/04-contact.png" alt="Contact form screenshot"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="placeholder-msg">
+            <span style="font-size:32px;">📸</span>
+            <strong>04-contact.png</strong>
+            <span>Screenshot do Formulário + WhatsApp</span>
+            <span style="font-size:11px; color:#555;">Salve em public/screenshots/</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FEATURE 5: V1 vs V2 ── -->
+    <div style="margin-bottom:16px;">
+      <p class="section-label" style="margin-bottom:10px;">05 · Two Visual Themes — Toggle in the Header</p>
+      <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:12px;">Same content. <span style="color:var(--orange);">Different personality.</span></h3>
+      <p style="color:var(--muted); font-size:14px; line-height:1.75; margin-bottom:32px; max-width:640px;">
+        A small toggle button in the navbar switches the entire visual identity instantly —
+        background, accent colors, bar gradient, particles and badge style — without
+        reloading the page or losing any scroll position.
+      </p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+
+        <div>
+          <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--orange); margin-bottom:12px;">V1 · Dark Orange</div>
+          <div class="browser-frame" style="margin:0;">
+            <div class="browser-bar">
+              <span class="dot" style="background:#ff5f56;"></span>
+              <span class="dot" style="background:#febc2e;"></span>
+              <span class="dot" style="background:#27c93f;"></span>
+              <span class="browser-url">V1 — Orange Theme</span>
+            </div>
+            <div class="screen-area" style="min-height:220px;">
+              <img src="screenshots/05-v1-orange.png" alt="V1 Orange theme"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="placeholder-msg">
+                <span style="font-size:28px;">📸</span>
+                <strong>05-v1-orange.png</strong>
+                <span style="font-size:11px; color:#555;">public/screenshots/</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:12px;">V2 · Purple &amp; Gold</div>
+          <div class="browser-frame" style="margin:0;">
+            <div class="browser-bar">
+              <span class="dot" style="background:#ff5f56;"></span>
+              <span class="dot" style="background:#febc2e;"></span>
+              <span class="dot" style="background:#27c93f;"></span>
+              <span class="browser-url">V2 — Gold Theme</span>
+            </div>
+            <div class="screen-area" style="min-height:220px;">
+              <img src="screenshots/05-v2-gold.png" alt="V2 Gold theme"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="placeholder-msg" style="border-color:rgba(212,175,55,.3);">
+                <span style="font-size:28px;">📸</span>
+                <strong style="color:var(--gold);">05-v2-gold.png</strong>
+                <span style="font-size:11px; color:#555;">public/screenshots/</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- INSTRUCTIONS BOX -->
+    <div style="margin-top:48px; padding:24px 28px; background:rgba(249,115,22,.05); border:1px dashed rgba(249,115,22,.3); border-radius:12px; display:flex; gap:16px; align-items:flex-start;">
+      <span style="font-size:24px; flex-shrink:0;">💡</span>
+      <div>
+        <h4 style="font-size:15px; font-weight:700; margin-bottom:8px;">How to add screenshots</h4>
+        <p style="font-size:13px; color:var(--muted); line-height:1.75;">
+          Run <code style="background:#1e1e1e; padding:2px 7px; border-radius:4px;">npm run dev</code>,
+          take a screenshot of each section, and save the files with the names shown above in
+          <code style="background:#1e1e1e; padding:2px 7px; border-radius:4px;">public/screenshots/</code>.
+          The placeholders will automatically be replaced by the real images —
+          no code changes needed.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════  PRICING  ════════════════════════ -->
+<section id="pricing" style="background:#0d0d0d; border-top:1px solid #1a1a1a; border-bottom:1px solid #1a1a1a; padding:96px 24px;">
+  <div class="container">
+    <p class="section-label">Intellectual Property &amp; Pricing</p>
+    <h2 class="section-title">Flexible models. <span>Clear ownership.</span></h2>
+    <p class="section-desc" style="margin-bottom:48px;">
+      This application was developed by <strong style="color:var(--text)">Thiago Gramuglia</strong>
+      <span style="color:#555; font-size:13px;">(CNPJ 64.828.611/0001-05)</span>, who retains full
+      intellectual property rights. Choose the model that fits your business:
+    </p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px;">
+
+      <!-- RENTAL -->
+      <div style="background:var(--card); border:1px solid #1e1e1e; border-radius:16px; padding:36px 32px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--orange),var(--gold));"></div>
+        <p style="font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--orange); margin-bottom:12px;">License · Rental</p>
+        <div style="font-size:3.2rem; font-weight:900; color:var(--text); line-height:1;">R$&nbsp;800</div>
+        <div style="font-size:1rem; color:#555; font-weight:600; margin-top:4px;">≈ <span style="color:#4ade80;">$154 USD</span></div>
+        <p style="color:var(--muted); font-size:13px; margin-top:6px; margin-bottom:24px;">one-time fee · per campaign</p>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:12px; margin-bottom:28px;">
+          <li style="display:flex; gap:10px; font-size:14px; color:var(--muted);"><span style="color:var(--orange);">✓</span> Full use during the campaign period</li>
+          <li style="display:flex; gap:10px; font-size:14px; color:var(--muted);"><span style="color:var(--orange);">✓</span> Both design versions (V1 &amp; V2) included</li>
+          <li style="display:flex; gap:10px; font-size:14px; color:var(--muted);"><span style="color:var(--orange);">✓</span> Deployment support</li>
+          <li style="display:flex; gap:10px; font-size:14px; color:var(--muted);"><span style="color:var(--orange);">✓</span> Copyright stays with the developer</li>
+          <li style="display:flex; gap:10px; font-size:14px; color:var(--muted);"><span style="color:var(--orange); font-weight:700;">+</span> <span><strong style="color:var(--text);">R$&nbsp;100/month</strong> <span style="color:#555; font-size:12px;">(≈ $19 USD)</span> optional maintenance — modifications after the first agreed version</span></li>
+        </ul>
+        <a href="https://wa.me/5511997870363?text=Hi%2C%20I%27m%20interested%20in%20the%20Rental%20plan%20for%20the%20ATOMI%20Landing%20Page." target="_blank" rel="noopener"
+           style="display:block; text-align:center; padding:13px; border-radius:8px; background:var(--orange); color:#fff; font-weight:700; font-size:14px; text-decoration:none;">
+          Get This Plan
+        </a>
+      </div>
+
+      <!-- PURCHASE -->
+      <div style="background:var(--card); border:1px solid var(--border); border-radius:16px; padding:36px 32px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--gold),var(--purple));"></div>
+        <div style="position:absolute; top:20px; right:20px; background:var(--gold); color:#000; font-size:10px; font-weight:800; padding:4px 10px; border-radius:999px; letter-spacing:1px;">FULL OWNERSHIP</div>
+        <p style="font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:12px;">Purchase · IP Transfer</p>
+        <div style="font-size:3.2rem; font-weight:900; color:var(--text); line-height:1;">R$&nbsp;2,000</div>
+        <div style="font-size:1rem; color:#555; font-weight:600; margin-top:4px;">≈ <span style="color:#4ade80;">$385 USD</span></div>
+        <p style="color:var(--muted); font-size:13px; margin-top:6px; margin-bottom:24px;">one-time fee · full rights transferred</p>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:12px; margin-bottom:28px;">
+          <li style="display:flex; gap:10px; font-size:14px; color:var(--muted);"><span style="color:var(--gold);">✓</span> Full intellectual property transfer</li>
+          <li style="display:flex; gap:10px; font-size:14px; color:var(--muted);"><span style="color:var(--gold);">✓</span> Complete source code ownership</li>
+          <li style="display:flex; gap:10px; font-size:14px; color:var(--muted);"><span style="color:var(--gold);">✓</span> Use, modify, or resell freely</li>
+          <li style="display:flex; gap:10px; font-size:14px; color:var(--muted);"><span style="color:var(--gold);">✓</span> Both design versions included</li>
+          <li style="display:flex; gap:10px; font-size:14px; color:var(--muted);"><span style="color:var(--gold); font-weight:700;">+</span> <span><strong style="color:var(--text);">R$&nbsp;250/month</strong> <span style="color:#555; font-size:12px;">(≈ $48 USD)</span> optional — ongoing adjustments &amp; support by the original developer</span></li>
+        </ul>
+        <a href="https://wa.me/5511997870363?text=Hi%2C%20I%27m%20interested%20in%20purchasing%20full%20rights%20to%20the%20ATOMI%20Landing%20Page." target="_blank" rel="noopener"
+           style="display:block; text-align:center; padding:13px; border-radius:8px; background:linear-gradient(90deg,var(--gold),#b8860b); color:#000; font-weight:700; font-size:14px; text-decoration:none;">
+          Get Full Ownership
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Source code policy -->
+    <div style="margin-top:32px; background:rgba(250,204,21,.04); border:1px solid rgba(250,204,21,.2); border-radius:14px; overflow:hidden;">
+      <div style="padding:18px 26px; border-bottom:1px solid rgba(250,204,21,.15); display:flex; align-items:center; gap:12px;">
+        <span style="font-size:22px;">🔒</span>
+        <h4 style="font-size:15px; font-weight:800; color:#fde047;">Source Code Policy — Why We Don't Send the Code Before Closing</h4>
+      </div>
+      <div style="padding:22px 26px; display:flex; flex-direction:column; gap:16px;">
+
+        <p style="font-size:13.5px; color:var(--muted); line-height:1.8;">
+          For security and intellectual property protection, <strong style="color:var(--text);">the full source code is not shared prior to a signed agreement and payment</strong>.
+          This is standard practice in custom software licensing — sending a zip of the application before any contract is signed
+          creates an unrecoverable risk: the code can be used, replicated or distributed with no compensation to the author.
+        </p>
+
+        <!-- process steps -->
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:0; margin-top:4px;">
+
+          <div style="flex:1; min-width:160px; padding:18px 20px; background:rgba(255,255,255,.03); border:1px solid #2a2a2a; border-radius:10px 0 0 10px; text-align:center;">
+            <div style="font-size:26px; margin-bottom:8px;">🌐</div>
+            <div style="font-size:13px; font-weight:700; margin-bottom:5px; color:var(--text);">1. Test the live demo</div>
+            <p style="font-size:12px; color:var(--muted); line-height:1.6;">
+              Navigate, filter products, test the countdown, try both themes and submit the contact form at the temporary URL.
+            </p>
+            <a href="https://atomi-promo-landing.onrender.com/" target="_blank" rel="noopener"
+               style="display:inline-block; margin-top:10px; font-size:11px; color:#60a5fa; font-weight:700; text-decoration:none; word-break:break-all;">
+              atomi-promo-landing.onrender.com →
+            </a>
+          </div>
+
+          <div style="padding:0 6px; color:#444; font-size:22px; flex-shrink:0;">→</div>
+
+          <div style="flex:1; min-width:160px; padding:18px 20px; background:rgba(255,255,255,.03); border:1px solid #2a2a2a; border-radius:0; text-align:center;">
+            <div style="font-size:26px; margin-bottom:8px;">🤝</div>
+            <div style="font-size:13px; font-weight:700; margin-bottom:5px; color:var(--text);">2. Agree on terms</div>
+            <p style="font-size:12px; color:var(--muted); line-height:1.6;">
+              Choose Rental or Purchase, confirm scope, duration and any customization needed. Agreement is closed via WhatsApp or email.
+            </p>
+          </div>
+
+          <div style="padding:0 6px; color:#444; font-size:22px; flex-shrink:0;">→</div>
+
+          <div style="flex:1; min-width:160px; padding:18px 20px; background:rgba(255,255,255,.03); border:1px solid #2a2a2a; border-radius:0 10px 10px 0; text-align:center;">
+            <div style="font-size:26px; margin-bottom:8px;">📦</div>
+            <div style="font-size:13px; font-weight:700; margin-bottom:5px; color:var(--text);">3. Code delivered</div>
+            <p style="font-size:12px; color:var(--muted); line-height:1.6;">
+              Full source code is delivered after the agreement is signed. No exceptions — this protects both parties.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- subtle note -->
+        <p style="font-size:12px; color:#444; line-height:1.7; margin-top:8px; padding:0 4px;">
+          The live demo at the link above provides complete functional verification — every feature visible, testable and real.
+          The source code is the deliverable that follows a closed deal, not a prerequisite for evaluating the product.
+          This is how professional software licensing works across the industry.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- Exchange rate note -->
+    <div style="margin-top:24px; padding:12px 20px; background:rgba(74,222,128,.04); border:1px solid rgba(74,222,128,.15); border-radius:8px; display:flex; align-items:center; gap:10px;">
+      <span style="font-size:18px; flex-shrink:0;">💱</span>
+      <p style="font-size:12px; color:#666; line-height:1.5;">
+        USD values are approximate, based on the exchange rate of <strong style="color:#4ade80;">R$&nbsp;5.20 per USD</strong> (BRL/USD · March 18, 2026).
+        Actual amount billed is in Brazilian Reais (BRL). Rate may vary at time of payment.
+      </p>
+    </div>
+
+    <!-- Temporary hosting notice -->
+    <div style="margin-top:16px; padding:18px 24px; background:rgba(96,165,250,.05); border:1px solid rgba(96,165,250,.2); border-radius:10px; display:flex; gap:14px; align-items:flex-start;">
+      <span style="font-size:22px; flex-shrink:0;">🌐</span>
+      <div>
+        <h4 style="font-size:14px; font-weight:700; margin-bottom:5px; color:#60a5fa;">Temporary Demo Hosting — For Presentation Purposes Only</h4>
+        <p style="font-size:13px; color:#666; line-height:1.7;">
+          The landing page is currently live at a temporary host exclusively for demonstration and sales purposes:
+          <br>
+          <a href="https://atomi-promo-landing.onrender.com/" target="_blank" rel="noopener"
+             style="color:#60a5fa; font-weight:700; word-break:break-all; text-decoration:none;">
+            https://atomi-promo-landing.onrender.com/
+          </a>
+          <br>
+          <span style="font-size:12px; color:#555;">
+            This is not the final production URL. Upon agreement, the application will be deployed to ATOMI's own domain or infrastructure.
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <!-- IP notice -->
+    <div style="margin-top:40px; padding:24px 28px; background:rgba(249,115,22,.05); border:1px solid var(--border); border-radius:12px; display:flex; gap:16px; align-items:flex-start;">
+      <span style="font-size:24px; flex-shrink:0;">⚖️</span>
+      <div>
+        <h4 style="font-size:15px; font-weight:700; margin-bottom:6px;">Intellectual Property Notice</h4>
+        <p style="font-size:13.5px; color:var(--muted); line-height:1.7;">
+          This application — including all source code, UI/UX design, animations, and component architecture — was
+          created by and is the intellectual property of <strong style="color:var(--text);">Thiago Gramuglia</strong>
+          <span style="color:#555; font-size:12px;">(CNPJ 64.828.611/0001-05)</span>.
+          Under the Rental/License model the copyright remains with the developer. Transfer of full ownership
+          only occurs upon completion of the Purchase plan payment.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════  REUSABILITY  ════════════════════════ -->
+<section style="background:#0d0d0d; border-top:1px solid #1a1a1a; border-bottom:1px solid #1a1a1a; padding:96px 24px;">
+  <div class="container">
+
+    <p class="section-label">Beyond This Campaign</p>
+    <h2 class="section-title">One platform. <span>Endless campaigns.</span></h2>
+    <p class="section-desc" style="margin-bottom:48px;">
+      This landing page is not a one-off project — it is a
+      <strong style="color:var(--text);">reusable promotional engine</strong>
+      built specifically for the Brazilian market. Every new promotion is just
+      a content update away.
+    </p>
+
+    <!-- Brazil callout -->
+    <div style="display:flex; gap:16px; align-items:flex-start; padding:22px 26px; background:rgba(0,156,59,.06); border:1px solid rgba(0,156,59,.2); border-radius:12px; margin-bottom:48px;">
+      <span style="font-size:28px; flex-shrink:0;">🇧🇷</span>
+      <div>
+        <h4 style="font-size:15px; font-weight:800; margin-bottom:6px;">Built for Brazil</h4>
+        <p style="font-size:13.5px; color:var(--muted); line-height:1.75;">
+          All copy, pricing, legal conditions and contact flows are in
+          <strong style="color:var(--text);">Brazilian Portuguese</strong>, prices displayed in
+          <strong style="color:var(--text);">BRL (R$)</strong>, WhatsApp integration follows Brazilian
+          mobile conventions, and the promotional calendar is aligned with
+          <strong style="color:var(--text);">Brazilian commemorative dates</strong>.
+          The application is ready to operate in the Brazilian B2B market out of the box.
+        </p>
+      </div>
+    </div>
+
+    <!-- HOW REUSE WORKS -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; margin-bottom:56px;">
+      <div>
+        <h3 style="font-size:1.25rem; font-weight:800; margin-bottom:12px;">What changes between campaigns</h3>
+        <p style="color:var(--muted); font-size:14px; line-height:1.75; margin-bottom:20px;">
+          The application architecture separates <strong style="color:var(--text);">data from design</strong>.
+          Products, prices, discounts, deadlines and promotional copy all live in a single
+          configuration file — updating them for a new campaign requires no changes to the
+          visual layer or codebase structure.
+        </p>
+        <div style="background:var(--card); border:1px solid #1e1e1e; border-radius:10px; padding:20px 22px; font-size:13px; color:#666; font-family:monospace; line-height:1.9;">
+          <span style="color:#555;">// products.js — just update these values</span><br>
+          <span style="color:#60a5fa;">name</span>: <span style="color:#86efac;">"ZX202 Fat Tire E-Bike"</span>,<br>
+          <span style="color:#60a5fa;">priceOriginal</span>: <span style="color:#fbbf24;">4999</span>,<br>
+          <span style="color:#60a5fa;">pricePromo</span>: <span style="color:#fbbf24;">4749</span>,<br>
+          <span style="color:#60a5fa;">discount</span>: <span style="color:#fbbf24;">5</span>, <span style="color:#555;">// %</span><br>
+          <span style="color:#60a5fa;">deadline</span>: <span style="color:#86efac;">"2026-04-30"</span>
+        </div>
+      </div>
+      <ul style="list-style:none; display:flex; flex-direction:column; gap:14px; margin-top:4px;">
+        <li style="padding:16px 18px; background:var(--card); border:1px solid #1e1e1e; border-radius:10px; display:flex; gap:14px; align-items:flex-start;">
+          <span style="font-size:20px; flex-shrink:0;">🔄</span>
+          <div>
+            <h4 style="font-size:14px; font-weight:700; margin-bottom:4px;">Products &amp; prices</h4>
+            <p style="font-size:13px; color:var(--muted);">Swap any product lineup, update prices and discount percentages in minutes.</p>
+          </div>
+        </li>
+        <li style="padding:16px 18px; background:var(--card); border:1px solid #1e1e1e; border-radius:10px; display:flex; gap:14px; align-items:flex-start;">
+          <span style="font-size:20px; flex-shrink:0;">⏳</span>
+          <div>
+            <h4 style="font-size:14px; font-weight:700; margin-bottom:4px;">Countdown deadline</h4>
+            <p style="font-size:13px; color:var(--muted);">One date change in config — the live timer updates automatically on the page.</p>
+          </div>
+        </li>
+        <li style="padding:16px 18px; background:var(--card); border:1px solid #1e1e1e; border-radius:10px; display:flex; gap:14px; align-items:flex-start;">
+          <span style="font-size:20px; flex-shrink:0;">🎨</span>
+          <div>
+            <h4 style="font-size:14px; font-weight:700; margin-bottom:4px;">Theme &amp; branding</h4>
+            <p style="font-size:13px; color:var(--muted);">Toggle between marketing (V1) and brand identity (V2) with a single click — or create a new seasonal theme.</p>
+          </div>
+        </li>
+        <li style="padding:16px 18px; background:var(--card); border:1px solid #1e1e1e; border-radius:10px; display:flex; gap:14px; align-items:flex-start;">
+          <span style="font-size:20px; flex-shrink:0;">📞</span>
+          <div>
+            <h4 style="font-size:14px; font-weight:700; margin-bottom:4px;">Sales contacts</h4>
+            <p style="font-size:13px; color:var(--muted);">Change the WhatsApp number, salesperson list or contact email — zero code changes needed.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- CAMPAIGN CALENDAR -->
+    <p class="section-label" style="margin-bottom:20px;">Brazilian promotional calendar — ready to activate</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-bottom:48px;">
+
+      <div style="background:var(--card); border:1px solid #1e1e1e; border-radius:10px; padding:18px 14px; text-align:center; transition:border-color .2s;" onmouseover="this.style.borderColor='rgba(249,115,22,.4)'" onmouseout="this.style.borderColor='#1e1e1e'">
+        <div style="font-size:26px; margin-bottom:8px;">🐰</div>
+        <div style="font-size:13px; font-weight:700; margin-bottom:3px;">Páscoa</div>
+        <div style="font-size:11px; color:var(--muted);">Mar / Abr</div>
+        <div style="font-size:10px; color:var(--orange); margin-top:6px; font-weight:700;">✓ ATIVO</div>
+      </div>
+
+      <div style="background:var(--card); border:1px solid #1e1e1e; border-radius:10px; padding:18px 14px; text-align:center;" onmouseover="this.style.borderColor='rgba(249,115,22,.4)'" onmouseout="this.style.borderColor='#1e1e1e'">
+        <div style="font-size:26px; margin-bottom:8px;">👩</div>
+        <div style="font-size:13px; font-weight:700; margin-bottom:3px;">Dia das Mães</div>
+        <div style="font-size:11px; color:var(--muted);">Maio</div>
+        <div style="font-size:10px; color:#555; margin-top:6px; font-weight:700;">Próxima campanha</div>
+      </div>
+
+      <div style="background:var(--card); border:1px solid #1e1e1e; border-radius:10px; padding:18px 14px; text-align:center;" onmouseover="this.style.borderColor='rgba(249,115,22,.4)'" onmouseout="this.style.borderColor='#1e1e1e'">
+        <div style="font-size:26px; margin-bottom:8px;">👨</div>
+        <div style="font-size:13px; font-weight:700; margin-bottom:3px;">Dia dos Pais</div>
+        <div style="font-size:11px; color:var(--muted);">Agosto</div>
+        <div style="font-size:10px; color:#555; margin-top:6px; font-weight:700;">Próxima campanha</div>
+      </div>
+
+      <div style="background:var(--card); border:1px solid #1e1e1e; border-radius:10px; padding:18px 14px; text-align:center;" onmouseover="this.style.borderColor='rgba(249,115,22,.4)'" onmouseout="this.style.borderColor='#1e1e1e'">
+        <div style="font-size:26px; margin-bottom:8px;">🛒</div>
+        <div style="font-size:13px; font-weight:700; margin-bottom:3px;">Black Friday</div>
+        <div style="font-size:11px; color:var(--muted);">Novembro</div>
+        <div style="font-size:10px; color:#555; margin-top:6px; font-weight:700;">Próxima campanha</div>
+      </div>
+
+      <div style="background:var(--card); border:1px solid #1e1e1e; border-radius:10px; padding:18px 14px; text-align:center;" onmouseover="this.style.borderColor='rgba(249,115,22,.4)'" onmouseout="this.style.borderColor='#1e1e1e'">
+        <div style="font-size:26px; margin-bottom:8px;">🎄</div>
+        <div style="font-size:13px; font-weight:700; margin-bottom:3px;">Natal / Ano Novo</div>
+        <div style="font-size:11px; color:var(--muted);">Dez / Jan</div>
+        <div style="font-size:10px; color:#555; margin-top:6px; font-weight:700;">Próxima campanha</div>
+      </div>
+
+      <div style="background:var(--card); border:1px solid #1e1e1e; border-radius:10px; padding:18px 14px; text-align:center;" onmouseover="this.style.borderColor='rgba(249,115,22,.4)'" onmouseout="this.style.borderColor='#1e1e1e'">
+        <div style="font-size:26px; margin-bottom:8px;">📦</div>
+        <div style="font-size:13px; font-weight:700; margin-bottom:3px;">Queima de Estoque</div>
+        <div style="font-size:11px; color:var(--muted);">Qualquer época</div>
+        <div style="font-size:10px; color:#555; margin-top:6px; font-weight:700;">Sob demanda</div>
+      </div>
+
+      <div style="background:var(--card); border:1px solid #1e1e1e; border-radius:10px; padding:18px 14px; text-align:center;" onmouseover="this.style.borderColor='rgba(249,115,22,.4)'" onmouseout="this.style.borderColor='#1e1e1e'">
+        <div style="font-size:26px; margin-bottom:8px;">🚲</div>
+        <div style="font-size:13px; font-weight:700; margin-bottom:3px;">Novos Modelos</div>
+        <div style="font-size:11px; color:var(--muted);">Lançamentos</div>
+        <div style="font-size:10px; color:#555; margin-top:6px; font-weight:700;">Sob demanda</div>
+      </div>
+
+    </div>
+
+    <!-- COST PER REUSE -->
+    <div style="background:linear-gradient(135deg,rgba(249,115,22,.06),rgba(16,132,116,.06)); border:1px solid rgba(249,115,22,.2); border-radius:14px; padding:32px 36px; display:flex; flex-wrap:wrap; gap:32px; align-items:center; justify-content:space-between;">
+      <div>
+        <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:8px;">The cost per campaign drops every time</h3>
+        <p style="font-size:13.5px; color:var(--muted); max-width:480px; line-height:1.75;">
+          Under the Rental model, each new campaign is a new agreement at R$&nbsp;800.
+          Under the Purchase model, you own the engine — reuse it for
+          <strong style="color:var(--text);">every future promotion at zero additional licensing cost</strong>,
+          paying only for maintenance updates when needed.
+        </p>
+      </div>
+      <div style="text-align:center; flex-shrink:0;">
+        <div style="font-size:2.4rem; font-weight:900; color:var(--orange);">∞</div>
+        <div style="font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:1px; margin-top:4px;">Campaigns<br>after purchase</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ════════════════════════  CTA FINAL  ════════════════════════ -->
 <section class="cta-final">
   <div class="container">
@@ -624,8 +1446,8 @@
       start converting B2B leads before the next promotional window opens.
     </p>
     <div class="cta-buttons">
-      <a href="mailto:dev@atomi.com" class="btn btn-primary">Request a Live Demo</a>
-      <a href="#solution"            class="btn btn-outline">Review Features Again</a>
+      <a href="https://wa.me/5511997870363?text=Hi%2C%20I%27m%20interested%20in%20the%20ATOMI%20Promotional%20Landing%20Page.%20Can%20we%20talk%3F" target="_blank" rel="noopener" class="btn btn-primary">💬 Request a Live Demo</a>
+      <a href="#pricing"             class="btn btn-outline">View Pricing</a>
     </div>
   </div>
 </section>
@@ -633,10 +1455,12 @@
 <!-- ════════════════════════  FOOTER  ════════════════════════ -->
 <footer>
   <p>
+    Developed &amp; owned by <strong>Thiago Gramuglia</strong> &nbsp;·&nbsp;
+    CNPJ <strong>64.828.611/0001-05</strong> &nbsp;·&nbsp;
+    <a href="https://wa.me/5511997870363" target="_blank" rel="noopener" style="color:var(--orange); text-decoration:none;">+55 11 99787-0363</a>
+    &nbsp;·&nbsp;
     <strong>ATOMI</strong> Promotional SPA Landing Page &nbsp;·&nbsp;
-    Built with React, Vite &amp; Tailwind CSS &nbsp;·&nbsp;
-    Designed for B2B wholesale conversion &nbsp;·&nbsp;
-    © 2026
+    © 2026 · All intellectual property rights reserved
   </p>
 </footer>
 

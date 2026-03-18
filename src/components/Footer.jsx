@@ -94,6 +94,8 @@ export default function Footer({ variant = 'orange' }) {
           </p>
           <p className="text-gray-600 text-xs text-center">
             Desenvolvido por <span className="text-gray-400 font-semibold">Thiago Gramuglia</span>
+            <span className="text-gray-700 mx-1">·</span>
+            <span className="text-gray-600">CNPJ 64.828.611/0001-05</span>
           </p>
           <p className="text-gray-600 text-xs flex items-center gap-1">
             Certificações:

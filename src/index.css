@@ -84,10 +84,11 @@
            hover:shadow-atomi-gold/30 active:scale-95;
   }
 
+  /* V2 card — official ATOMI dark charcoal */
   .card-purple {
-    @apply bg-gradient-to-br from-[#1a0030]/80 to-[#0d0015]/80 border border-atomi-purple/30 rounded-2xl overflow-hidden
-           transition-all duration-300 hover:border-atomi-gold/50 hover:shadow-xl
-           hover:shadow-atomi-purple/20 hover:-translate-y-1 backdrop-blur-sm;
+    @apply bg-gradient-to-br from-[#282828] to-[#1D1D1D] border border-[#3a3a3a] rounded-2xl overflow-hidden
+           transition-all duration-300 hover:border-[#108474]/60 hover:shadow-xl
+           hover:shadow-[#108474]/15 hover:-translate-y-1;
   }
 }
 
@@ -97,27 +98,30 @@
   }
 
   .text-gradient-gold {
-    @apply bg-gradient-to-r from-atomi-gold to-yellow-300 bg-clip-text text-transparent;
+    /* V2: teal-to-orange gradient — official brand */
+    @apply bg-gradient-to-r from-[#108474] to-[#EA6400] bg-clip-text text-transparent;
   }
 
   .text-gradient-purple {
-    @apply bg-gradient-to-r from-atomi-purple-light to-atomi-gold bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#EA6400] to-[#108474] bg-clip-text text-transparent;
   }
 
   .bg-hero-dark {
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
   }
 
+  /* V2 — Official ATOMI brand background (#1D1D1D base — matches atomiscooters.com) */
   .bg-hero-purple {
-    background: linear-gradient(135deg, #0d0015 0%, #1a0030 50%, #0d0015 100%);
+    background: linear-gradient(135deg, #161616 0%, #1D1D1D 50%, #161616 100%);
   }
 
   .glow-orange {
     box-shadow: 0 0 30px rgba(249, 115, 22, 0.4);
   }
 
+  /* V2 glow uses official teal */
   .glow-gold {
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 30px rgba(16, 132, 116, 0.5);
   }
 
   .particle {
@@ -148,14 +152,15 @@
   animation: float 6s ease-in-out infinite;
 }
 
+/* V2 particles — official ATOMI teal + orange */
 .particles-container::before {
-  background: #7C3AED;
+  background: #108474;
   top: 10%;
   left: 10%;
 }
 
 .particles-container::after {
-  background: #D4AF37;
+  background: #EA6400;
   bottom: 10%;
   right: 10%;
   animation-delay: -3s;
@@ -171,9 +176,9 @@
   animation: shimmer 3s linear infinite;
 }
 
-/* Easter egg badge */
+/* V2 badge — official ATOMI teal-to-orange */
 .easter-badge {
-  background: linear-gradient(135deg, #7C3AED, #D4AF37);
+  background: linear-gradient(135deg, #108474, #EA6400);
   animation: glow 2s ease-in-out infinite alternate;
 }
 .easter-badge-orange {
@@ -190,9 +195,10 @@
   100% { background-position: 200% center; }
 }
 
+/* V2 glow keyframe — teal */
 @keyframes glow {
-  0% { box-shadow: 0 0 10px rgba(124, 58, 237, 0.5); }
-  100% { box-shadow: 0 0 25px rgba(212, 175, 55, 0.8); }
+  0%   { box-shadow: 0 0 10px rgba(16, 132, 116, 0.5); }
+  100% { box-shadow: 0 0 25px rgba(234, 100,   0, 0.7); }
 }
 
 @keyframes float {

@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         atomi: {
+          // V1 — Marketing (high-contrast)
           orange: '#F97316',
           'orange-dark': '#EA6C0A',
           'orange-light': '#FB923C',
@@ -15,11 +16,16 @@ export default {
           'dark': '#111111',
           'card': '#1a1a1a',
           'border': '#2a2a2a',
-          gold: '#D4AF37',
-          'gold-light': '#F0D060',
-          purple: '#7C3AED',
-          'purple-dark': '#5B21B6',
-          'purple-light': '#A855F7',
+          // V2 — Official ATOMI brand identity (atomiscooters.com)
+          gold: '#108474',          // teal — official secondary
+          'gold-light': '#12a08a',  // teal lighter
+          purple: '#EA6400',        // official ATOMI orange (richer, deeper)
+          'purple-dark': '#c45200',
+          'purple-light': '#ff7e20',
+          // Official background tones
+          'official-bg': '#1D1D1D',
+          'official-card': '#282828',
+          'official-border': '#3a3a3a',
         }
       },
       fontFamily: {
