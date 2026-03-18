@@ -200,7 +200,7 @@ export default function ContactForm({ variant = 'orange' }) {
                         . Entre em contato pelo canal geral:
                       </p>
                       <a
-                        href={`https://wa.me/5500000000000?text=${encodeURIComponent(`🏍️ Olá! Tenho interesse na promoção Pack Shoroow ATOMI. Sou do estado de ${selectedStateObj?.name}.`)}`}
+                        href={`https://wa.me/5500000000000?text=${encodeURIComponent(`🏍️ Olá! Tenho interesse na promoção Pack Showroom ATOMI. Sou do estado de ${selectedStateObj?.name}.`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full bg-green-700 hover:bg-green-600 text-white font-black py-3.5 rounded-xl flex items-center justify-center gap-2 transition-all duration-200 text-sm"

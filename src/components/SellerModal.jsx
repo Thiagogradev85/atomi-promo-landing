@@ -31,7 +31,7 @@ export default function SellerModal({ seller, stateName, onClose, variant = 'ora
   const accentTextClass = isOrange ? 'text-atomi-orange' : 'text-atomi-gold';
   const waBtnClass = 'bg-green-600 hover:bg-green-500 active:scale-95';
 
-  const waMessage = `🏍️ Olá ${seller.name}! Vi a promoção Pack Shoroow ATOMI e tenho interesse nos produtos. Sou do estado de ${stateName}. Pode me passar mais informações?`;
+  const waMessage = `🏍️ Olá ${seller.name}! Vi a promoção Pack Showroom ATOMI e tenho interesse nos produtos. Sou do estado de ${stateName}. Pode me passar mais informações?`;
   const waUrl = `https://wa.me/${seller.whatsapp}?text=${encodeURIComponent(waMessage)}`;
 
   return (

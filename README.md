@@ -1,6 +1,6 @@
-# ATOMI Pack Shoroow — Landing Page Promocional
+# ATOMI Pack Showroom — Landing Page Promocional
 
-Landing page profissional para a promoção Pack Shoroow de Fevereiro/Março 2026 da **ATOMI** — bikes e patinetes elétricos.
+Landing page profissional para a promoção Pack Showroom de Fevereiro/Março 2026 da **ATOMI** — bikes e patinetes elétricos.
 
 ## 🎨 Versões Disponíveis
 
@@ -114,7 +114,7 @@ git remote add origin https://github.com/Thiagogradev85/atomi-promo-landing.git
 git add .
 
 # Crie o commit inicial
-git commit -m "feat: ATOMI Pack Shoroow landing page - 2 versões"
+git commit -m "feat: ATOMI Pack Showroom landing page - 2 versões"
 
 # Envie para o GitHub
 git push -u origin main
@@ -144,8 +144,8 @@ vercel
 | ZX161 | R$ 4.980,00 | R$ 2.579,00 | 48% |
 | C1 | R$ 1.980,00 | R$ 1.849,00 | 7% |
 
-> Mínimo 4 unidades por pedido. Exclusivo Pack Shoroow.
+> Mínimo 4 unidades por pedido. Exclusivo Pack Showroom.
 
 ---
 
-© 2026 ATOMI Pack Shoroow. Todos os direitos reservados.
+© 2026 ATOMI Pack Showroom. Todos os direitos reservados.

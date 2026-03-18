@@ -88,7 +88,7 @@ export default function LandingV2() {
         }}
       >
         <span className="text-white">
-          🐰 PROMOÇÃO DE PÁSCOA PACK SHOROOW — FEV/ABR 2026 — BIKES & PATINETES ELÉTRICOS ATOMI 🥚
+          🐰 PROMOÇÃO DE PÁSCOA PACK SHOWROOM — FEV/ABR 2026 — BIKES & PATINETES ELÉTRICOS ATOMI 🥚
         </span>
       </motion.div>
 

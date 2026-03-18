@@ -43,7 +43,7 @@ export default function Navbar({ variant = 'orange' }) {
               ATOMI
             </span>
             <span className="text-gray-400 text-xs font-medium hidden sm:block">
-              PACK SHOROOW
+              PACK SHOWROOM
             </span>
           </a>
 

@@ -51,7 +51,7 @@ export default function HeroBanner({ variant = 'orange' }) {
             : 'border-atomi-gold/40 text-atomi-gold bg-atomi-gold/10'
         }`}>
           <FaFire className="animate-pulse" />
-          <span>PACK SHOROOW — FEV/ABR 2026</span>
+          <span>PACK SHOWROOM — FEV/ABR 2026</span>
           <FaFire className="animate-pulse" />
         </div>
       </motion.div>
@@ -76,7 +76,7 @@ export default function HeroBanner({ variant = 'orange' }) {
         <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
           Preços especiais por tempo limitado! Pack mínimo de{' '}
           <span className={`${accentColor} font-bold`}>4 unidades</span>. Exclusivo
-          Pack Shoroow — enquanto durar o estoque.
+          Pack Showroom — enquanto durar o estoque.
         </p>
 
         {/* CTA Buttons */}

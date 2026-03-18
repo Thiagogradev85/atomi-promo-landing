@@ -32,7 +32,7 @@ export default function ProductsSection({ variant = 'orange' }) {
           className="text-center mb-12"
         >
           <span className={`text-xs uppercase tracking-widest font-bold ${accentColor} mb-3 block`}>
-            🔥 Ofertas Pack Shoroow
+            🔥 Ofertas Pack Showroom
           </span>
           <h2 className="font-display text-4xl md:text-6xl tracking-wider text-white mb-4">
             NOSSO CATÁLOGO
@@ -85,7 +85,7 @@ export default function ProductsSection({ variant = 'orange' }) {
         >
           <p className="text-gray-600 text-sm">
             💥 Promoção válida de <span className="text-gray-400 font-medium">Fevereiro a Março 2026</span> •
-            Exclusivo <span className="text-gray-400 font-medium">Pack Shoroow</span> •
+            Exclusivo <span className="text-gray-400 font-medium">Pack Showroom</span> •
             Estoque limitado
           </p>
         </motion.div>

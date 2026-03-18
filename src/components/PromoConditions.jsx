@@ -15,8 +15,8 @@ const conditions = [
   },
   {
     icon: <FaStore size={28} />,
-    title: 'Exclusivo Pack Shoroow',
-    desc: 'Oferta exclusiva e disponível apenas através da Pack Shoroow.',
+    title: 'Exclusivo Pack Showroom',
+    desc: 'Oferta exclusiva e disponível apenas através da Pack Showroom.',
   },
   {
     icon: <MdElectricBike size={28} />,
@@ -94,7 +94,7 @@ export default function PromoConditions({ variant = 'orange' }) {
                 1 ANO DE GARANTIA
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed max-w-xl">
-                Todos os produtos ATOMI Pack Shoroow vêm com <span className="text-white font-semibold">12 meses de garantia</span> —
+                Todos os produtos ATOMI Pack Showroom vêm com <span className="text-white font-semibold">12 meses de garantia</span> —
                 o dobro do que a maioria dos concorrentes oferece. Qualidade e segurança que você pode contar.
               </p>
             </div>
@@ -121,7 +121,7 @@ export default function PromoConditions({ variant = 'orange' }) {
           className="overflow-hidden rounded-2xl border border-gray-800"
         >
           <div className={`px-6 py-4 bg-gradient-to-r ${isOrange ? 'from-atomi-orange/10 to-transparent' : 'from-atomi-gold/10 to-transparent'} border-b border-gray-800`}>
-            <h3 className="text-white font-bold text-lg">📋 Resumo de Preços — Pack Shoroow</h3>
+            <h3 className="text-white font-bold text-lg">📋 Resumo de Preços — Pack Showroom</h3>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full">
