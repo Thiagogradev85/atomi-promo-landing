@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 'm202',
-    name: 'M-202',
+    name: 'M202',
     category: 'e-bike',
     categoryLabel: 'E-Bike Chopper',
     originalPrice: 5180,
