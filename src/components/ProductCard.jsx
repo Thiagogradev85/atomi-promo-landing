@@ -7,17 +7,19 @@ import { formatPrice, getDiscount } from '../data/products';
 
 // Gera todas as variantes de caminho para a imagem do produto pelo ID
 // Ex: /images/m201.jpg, /images/m201.png, /images/m201.jpeg, /images/m201.webp
-function getProductImageSources(productId) {
+function getProductImageSources(productId, imageOverride) {
+  if (imageOverride) return [imageOverride];
   const exts = ['jpg', 'jpeg', 'png', 'webp'];
   return exts.map((ext) => `/images/${productId}.${ext}`);
 }
 
 function ProductImage({ product }) {
   const [srcIndex, setSrcIndex] = useState(0);
-  const sources = getProductImageSources(product.id);
+  const sources = getProductImageSources(product.id, product.image);
   const allFailed = srcIndex >= sources.length;
 
   const gradients = {
+    'm202': 'from-gray-900 via-gray-800 to-black',
     'm201': 'from-gray-900 via-gray-800 to-black',
     'l10': 'from-gray-900 via-zinc-800 to-black',
     'zx202': 'from-gray-900 via-slate-800 to-black',
@@ -27,11 +29,18 @@ function ProductImage({ product }) {
   };
 
   if (!allFailed) {
+    const isCropped = !!product.imageObjectPosition;
+    const scale = product.imageScale || '1.35';
     return (
       <img
         src={sources[srcIndex]}
         alt={`ATOMI ${product.name}`}
-        className="w-full h-full object-contain pt-16 transition-transform duration-500 group-hover:scale-105"
+        className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${
+          isCropped
+            ? `object-cover`
+            : 'object-contain pt-16'
+        }`}
+        style={isCropped ? { objectPosition: product.imageObjectPosition, transform: `scale(${scale})` } : undefined}
         onError={() => setSrcIndex((i) => i + 1)}
       />
     );
