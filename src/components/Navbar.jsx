@@ -64,24 +64,6 @@ export default function Navbar({ variant = 'orange' }) {
             ))}
           </div>
 
-          {/* Theme toggle */}
-          <div className="hidden md:flex items-center gap-3">
-            <motion.button
-              onClick={toggle}
-              whileTap={{ scale: 0.92 }}
-              title={variant === 'orange' ? 'Mudar para tema Dourado' : 'Mudar para tema Laranja'}
-              className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-bold transition-all duration-300"
-              style={
-                variant === 'gold'
-                  ? { borderColor: '#D4AF37', color: '#D4AF37', background: 'rgba(212,175,55,0.1)' }
-                  : { borderColor: '#F97316', color: '#F97316', background: 'rgba(249,115,22,0.1)' }
-              }
-            >
-              <span style={{ fontSize: 13 }}>{variant === 'gold' ? '🟠' : '🟣'}</span>
-              <span>V{variant === 'gold' ? '2' : '1'}</span>
-            </motion.button>
-          </div>
-
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
@@ -126,19 +108,6 @@ export default function Navbar({ variant = 'orange' }) {
                   {link.label}
                 </a>
               ))}
-              <button
-                onClick={() => { toggle(); setMobileOpen(false); }}
-                className="text-sm font-bold py-2 rounded-lg border flex items-center justify-center gap-2"
-                style={
-                  variant === 'gold'
-                    ? { borderColor: '#D4AF37', color: '#D4AF37', background: 'rgba(212,175,55,0.1)' }
-                    : { borderColor: '#F97316', color: '#F97316', background: 'rgba(249,115,22,0.1)' }
-                }
-              >
-                <span>{variant === 'gold' ? '🟠' : '🟣'}</span>
-                Trocar tema (V{variant === 'gold' ? '1' : '2'})
-              </button>
-
               <a href="#contato" onClick={() => setMobileOpen(false)}
                 className={`${accentBg} text-white text-center font-bold py-3 rounded-lg flex items-center justify-center gap-2`}>
                 <span className="relative flex items-center justify-center">
