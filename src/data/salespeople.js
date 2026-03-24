@@ -12,7 +12,7 @@ export const salespeople = [
     id: 2,
     name: 'Thiago',
     photo: '/vendedores/thiago.jpg',
-    whatsapp: '5511923165330',
+    whatsapp: '5511923165330', // Thiago
     states: ['MT', 'MS', 'TO', 'SE', 'PR'],
     stateNames: ['Mato Grosso', 'Mato Grosso do Sul', 'Tocantins', 'Sergipe', 'Paraná'],
   },
@@ -20,7 +20,7 @@ export const salespeople = [
     id: 3,
     name: 'Stefanni',
     photo: '/vendedores/stefanni.jpg',
-    whatsapp: '5511923165330', // Substitua pelo número real da Stefanni
+    whatsapp: '5511999994720', // Stefanni
     states: ['SC', 'RS', 'GO', 'SP', 'DF'],
     stateNames: ['Santa Catarina', 'Rio Grande do Sul', 'Goiás', 'São Paulo', 'Distrito Federal'],
   },
@@ -28,7 +28,7 @@ export const salespeople = [
     id: 4,
     name: 'Daniela',
     photo: '/vendedores/daniela.jpg',
-    whatsapp: '5511923165330', // Substitua pelo número real da Daniela
+    whatsapp: '5511993795993', // Daniela
     states: ['AL', 'PE', 'CE', 'BA', 'RN', 'PB'],
     stateNames: ['Alagoas', 'Pernambuco', 'Ceará', 'Bahia', 'Rio Grande do Norte', 'Paraíba'],
   },
