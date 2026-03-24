@@ -84,7 +84,7 @@ export default function ProductsSection({ variant = 'orange' }) {
           className="mt-10 text-center"
         >
           <p className="text-gray-600 text-sm">
-            💥 Promoção válida de <span className="text-gray-400 font-medium">Fevereiro a Março 2026</span> •
+            💥 Promoção válida de <span className="text-gray-400 font-medium">Fevereiro a Abril 2026</span> •
             Exclusivo <span className="text-gray-400 font-medium">Pack Showroom</span> •
             Estoque limitado
           </p>
