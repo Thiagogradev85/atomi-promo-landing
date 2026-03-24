@@ -1,6 +1,6 @@
 # ATOMI Pack Showroom — Landing Page Promocional
 
-Landing page profissional para a promoção Pack Showroom de Fevereiro/Março 2026 da **ATOMI** — bikes e patinetes elétricos.
+Landing page profissional para a promoção Pack Showroom de Fevereiro/Abril 2026 da **ATOMI** — bikes e patinetes elétricos.
 
 ## 🎨 Versões Disponíveis
 

@@ -11,7 +11,7 @@ const conditions = [
   {
     icon: <FaCalendarAlt size={28} />,
     title: 'Período Válido',
-    desc: 'Promoção válida durante os meses de Fevereiro a Março de 2026.',
+    desc: 'Promoção válida durante os meses de Fevereiro a Abril de 2026.',
   },
   {
     icon: <FaStore size={28} />,
