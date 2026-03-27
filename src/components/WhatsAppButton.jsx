@@ -6,10 +6,17 @@ export default function WhatsAppButton() {
   const [showTooltip, setShowTooltip] = useState(false);
 
   function handleClick() {
+    if (window.gtag) {
+      window.gtag('event', 'whatsapp_click', {
+        button_name: 'floating_whatsapp_button',
+        page_location: window.location.href,
+        section_target: 'contato',
+      });
+    }
+
     const section = document.getElementById('contato');
     if (section) {
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // Dispara o hashchange manualmente para acionar o highlight do dropdown
       history.pushState(null, '', '#contato');
       window.dispatchEvent(new HashChangeEvent('hashchange'));
     }
