@@ -5,32 +5,24 @@ export const salespeople = [
     name: 'Leandro Araujo',
     photo: '/vendedores/leandro.jpg',
     whatsapp: '5511915467196',
-    states: ['MG', 'ES', 'RJ', 'AC', 'AP', 'AM', 'MA', 'PA', 'PI', 'RO', 'RR'],
-    stateNames: ['Minas Gerais', 'Espírito Santo', 'Rio de Janeiro', 'Acre', 'Amapá', 'Amazonas', 'Maranhão', 'Pará', 'Piauí', 'Rondônia', 'Roraima'],
+    states: ['AC', 'AM', 'AP', 'DF', 'ES', 'GO', 'MA', 'MG', 'PA', 'PI', 'RJ', 'RO', 'RR', 'SE', 'SP', 'TO'],
+    stateNames: ['Acre', 'Amazonas', 'Amapá', 'Distrito Federal', 'Espírito Santo', 'Goiás', 'Maranhão', 'Minas Gerais', 'Pará', 'Piauí', 'Rio de Janeiro', 'Rondônia', 'Roraima', 'Sergipe', 'São Paulo', 'Tocantins'],
   },
   {
     id: 2,
     name: 'Thiago',
     photo: '/vendedores/thiago.jpg',
     whatsapp: '5511923165330', // Thiago
-    states: ['MT', 'MS', 'TO', 'SE', 'PR'],
-    stateNames: ['Mato Grosso', 'Mato Grosso do Sul', 'Tocantins', 'Sergipe', 'Paraná'],
-  },
-  {
-    id: 3,
-    name: 'Stefanni',
-    photo: '/vendedores/stefanni.jpg',
-    whatsapp: '5511999994720', // Stefanni
-    states: ['SC', 'RS', 'GO', 'SP', 'DF'],
-    stateNames: ['Santa Catarina', 'Rio Grande do Sul', 'Goiás', 'São Paulo', 'Distrito Federal'],
+    states: ['MS', 'MT', 'PR', 'RS', 'SC'],
+    stateNames: ['Mato Grosso do Sul', 'Mato Grosso', 'Paraná', 'Rio Grande do Sul', 'Santa Catarina'],
   },
   {
     id: 4,
     name: 'Daniela',
     photo: '/vendedores/daniela.jpg',
     whatsapp: '5511993795993', // Daniela
-    states: ['AL', 'PE', 'CE', 'BA', 'RN', 'PB'],
-    stateNames: ['Alagoas', 'Pernambuco', 'Ceará', 'Bahia', 'Rio Grande do Norte', 'Paraíba'],
+    states: ['AL', 'BA', 'CE', 'PB', 'PE', 'RN'],
+    stateNames: ['Alagoas', 'Bahia', 'Ceará', 'Paraíba', 'Pernambuco', 'Rio Grande do Norte'],
   },
 ];
 
