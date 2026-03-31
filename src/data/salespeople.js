@@ -5,8 +5,8 @@ export const salespeople = [
     name: 'Leandro Araujo',
     photo: '/vendedores/leandro.jpg',
     whatsapp: '5511915467196',
-    states: ['AC', 'AM', 'AP', 'DF', 'ES', 'GO', 'MA', 'MG', 'PA', 'PI', 'RJ', 'RO', 'RR', 'SE', 'SP', 'TO'],
-    stateNames: ['Acre', 'Amazonas', 'Amapá', 'Distrito Federal', 'Espírito Santo', 'Goiás', 'Maranhão', 'Minas Gerais', 'Pará', 'Piauí', 'Rio de Janeiro', 'Rondônia', 'Roraima', 'Sergipe', 'São Paulo', 'Tocantins'],
+    states: ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'PA', 'PB', 'PE', 'PI', 'RJ', 'RN', 'RO', 'RR', 'SE', 'SP', 'TO'],
+    stateNames: ['Acre', 'Alagoas', 'Amazonas', 'Amapá', 'Bahia', 'Ceará', 'Distrito Federal', 'Espírito Santo', 'Goiás', 'Maranhão', 'Minas Gerais', 'Pará', 'Paraíba', 'Pernambuco', 'Piauí', 'Rio de Janeiro', 'Rio Grande do Norte', 'Rondônia', 'Roraima', 'Sergipe', 'São Paulo', 'Tocantins'],
   },
   {
     id: 2,
@@ -15,14 +15,6 @@ export const salespeople = [
     whatsapp: '5511923165330', // Thiago
     states: ['MS', 'MT', 'PR', 'RS', 'SC'],
     stateNames: ['Mato Grosso do Sul', 'Mato Grosso', 'Paraná', 'Rio Grande do Sul', 'Santa Catarina'],
-  },
-  {
-    id: 4,
-    name: 'Daniela',
-    photo: '/vendedores/daniela.jpg',
-    whatsapp: '5511993795993', // Daniela
-    states: ['AL', 'BA', 'CE', 'PB', 'PE', 'RN'],
-    stateNames: ['Alagoas', 'Bahia', 'Ceará', 'Paraíba', 'Pernambuco', 'Rio Grande do Norte'],
   },
 ];
 
